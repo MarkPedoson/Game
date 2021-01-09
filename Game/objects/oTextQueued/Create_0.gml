@@ -1,0 +1,1 @@
+ticket = instance_number(oTextQueued); //Tells where it is in the queue

@@ -1,0 +1,1 @@
+attackdelay = 0;
