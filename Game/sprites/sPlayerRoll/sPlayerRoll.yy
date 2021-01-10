@@ -128,8 +128,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8c302c17-c7cc-4e7c-8866-7709b14c861c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cerberus_player",
+    "path": "folders/Sprites/Cerberus_player.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerRoll",

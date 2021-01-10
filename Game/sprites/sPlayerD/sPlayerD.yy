@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0c606310-3e04-4d49-a441-524e61fa0f27","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cerberus_player",
+    "path": "folders/Sprites/Cerberus_player.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerD",

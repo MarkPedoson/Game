@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Entity",
+    "path": "folders/Objects/Entity.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSignPost",
