@@ -10,7 +10,7 @@ x2Target = RESOLUTION_W;
 lerpProgress = 0;
 textProgress = 0;
 
-responseSelected = 0; //Which response is selected
+textY = y1 + 8;
+textX = (x1 + x2) / 2;
 
-//Temp
-//responses = [-1];
+responseSelected = 0; //Which response is selected

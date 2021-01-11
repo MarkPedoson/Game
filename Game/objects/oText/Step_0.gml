@@ -40,3 +40,69 @@ if (oPlayer.key_roll)
 		}
 	}
 }
+
+//Mouse selection
+var _newlineHeight = string_height("\n");
+var _lastResponse = _newlineHeight * (_max + 1);
+var _textMessageY = string_height(textMessage);
+
+if ((mouse_y < (textY + _textMessageY + _lastResponse))
+	and (mouse_y > (textY + _textMessageY)))
+{
+	var bottomEdgeY = textY + _textMessageY + _lastResponse;
+	var tempResponseSelected = ((bottomEdgeY - mouse_y) div (_newlineHeight));
+	responseSelected = _max - tempResponseSelected;
+	if (mouse_check_button_pressed(mb_left))
+	{
+		var _messageLength = string_length(textMessage);
+		if (textProgress >= _messageLength)
+		{
+			if (arrayResponses[0] != -1)
+			{
+				with(originInstance) DialogueResponses(other.responseScripts[other.responseSelected]);
+			}
+			instance_destroy();
+			if (instance_exists(oTextQueued))
+			{
+				with (oTextQueued) ticket--;
+			}
+			else
+			{
+				with (oPlayer) state = lastState;
+			}
+		}
+		else
+		{
+			if (textProgress > 2) //Lets you skip the message
+			{
+				textProgress = _messageLength;
+			}
+		}
+	}
+}
+else if (arrayResponses[0] == -1)
+{
+	if (mouse_check_button_pressed(mb_left))
+	{
+		var _messageLength = string_length(textMessage);
+		if (textProgress >= _messageLength)
+		{
+			instance_destroy();
+			if (instance_exists(oTextQueued))
+			{
+				with (oTextQueued) ticket--;
+			}
+			else
+			{
+				with (oPlayer) state = lastState;
+			}
+		}
+		else
+		{
+			if (textProgress > 2) //Lets you skip the message
+			{
+				textProgress = _messageLength;
+			}
+		}
+	}
+}

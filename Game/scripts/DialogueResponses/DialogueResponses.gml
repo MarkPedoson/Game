@@ -6,8 +6,9 @@ function DialogueResponses(responses){
 	{
 		case 0: break;
 		case 1: NewTextBox("You gave response A", 1, [-1]); break;
-		case 2: NewTextBox("You gave response B. More?", 1, ["3:Yes!", "0:No"]); break;
-		case 3: NewTextBox("Ok boomer", 1, [-1]); break;
+		case 2: NewTextBox("You gave response B. More?", 1, ["4:Yes!", "0:No"]); break;
+		case 3: NewTextBox("Well then how did it look?", 1, [-1]); break;
+		case 4: NewTextBox("Ok boomer", 1, [-1]); break;
 		default: show_debug_message("This shouldnt happen!"); break;
 	}
 	

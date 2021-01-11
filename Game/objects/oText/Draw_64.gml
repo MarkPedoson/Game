@@ -18,6 +18,6 @@ if ((arrayResponses[0] != -1) and (textProgress >= string_length(textMessage)))
 		}
 }
 
-draw_text((x1 + x2) / 2, y1 + 8, _print);  //Draws text
+draw_text(textX, textY, _print);  //Draws text shadow
 draw_set_color(c_white);
-draw_text((x1 + x2) / 2, y1 + 7, _print);  //Shadow
+draw_text(textX, textY - 1, _print);  //Text itself
