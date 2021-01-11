@@ -21,6 +21,7 @@
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":0,},
     {"id":{"name":"sSlash","path":"sprites/sSlash/sSlash.yy",},"order":3,},
+    {"id":{"name":"sShadow","path":"sprites/sShadow/sShadow.yy",},"order":15,},
     {"id":{"name":"sSignPost","path":"sprites/sSignPost/sSignPost.yy",},"order":13,},
     {"id":{"name":"oEnemySmash","path":"objects/oEnemySmash/oEnemySmash.yy",},"order":7,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},

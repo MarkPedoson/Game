@@ -10,6 +10,8 @@ walksp = 2.5; //movement speed
 rollsp = 4;
 hp = 3; 
 flash = 0;
+rollheight = 24;
+z = 0;
 
 spriteRoll = sPlayerRoll;
 spriteRun = sPlayerRun;

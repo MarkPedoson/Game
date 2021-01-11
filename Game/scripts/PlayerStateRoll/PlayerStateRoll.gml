@@ -14,6 +14,9 @@ function PlayerStateRoll(){
 	var _totalFrames = sprite_get_number(sprite_index);  //How many frames is the roll
 	image_index = min(((1 - (moveDistanceRemaining / rolldist)) * _totalFrames), _totalFrames - 1);
 	
+	//Change height
+	z = sin(((moveDistanceRemaining / rolldist) * pi)) * rollheight;
+	
 	//Logic for roll animation direction facing according to keyboard input
 	if ((roll_direction <= 45) and (roll_direction >= 0)) or ((roll_direction >= 315) and (roll_direction <= 360))
 	{
