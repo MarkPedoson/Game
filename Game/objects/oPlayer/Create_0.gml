@@ -7,11 +7,12 @@ hsp = 0; //horizontal speed
 vsp = 0; //vertical speed
 rolldist = 100 //dashing distance
 walksp = 2.5; //movement speed
-rollsp = 4;
-hp = 3; 
-flash = 0;
-rollheight = 24;
-z = 0;
+rollsp = 4; //how fast the space skill is
+hp = 3; //health
+flash = 0; //Getting damager
+rollheight = 24; //roll  height
+z = 0; //setting z value
+
 
 spriteRoll = sPlayerRoll;
 spriteRun = sPlayerRun;

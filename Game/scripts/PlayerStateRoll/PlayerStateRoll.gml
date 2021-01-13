@@ -6,6 +6,9 @@ function PlayerStateRoll(){
 	hsp = lengthdir_x(rollsp, roll_direction);
 	vsp = lengthdir_y(rollsp, roll_direction);
 	
+	//Hide the weapon
+	if (instance_exists(oWeapon)) oWeapon.visible = false;
+	
 	moveDistanceRemaining = max(0, moveDistanceRemaining - rollsp);
 	var _collided = PlayerCollision();
 	
@@ -26,6 +29,8 @@ function PlayerStateRoll(){
 	{
 		image_xscale = -1;	//Left
 	}
+	
+	
 	
 	//Change state
 	if (moveDistanceRemaining <= 0)
