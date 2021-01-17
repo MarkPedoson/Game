@@ -1,17 +1,39 @@
 //Draw coordination based on weapon
 
+sprite_index = basicSprite;
+
+
 x = oPlayer.x;
 y = oPlayer.y - 12;
 
 
-counter ++;
+
 //Mouse angle
 x = x - lengthdir_x(-16, oBasic.direction);
 y = y - lengthdir_y(-16, oBasic.direction);
-show_debug_message(string(counter));
 
-//duration = max(0, duration - d_speed);
-//var _totalFrames = sprite_get_number(slashSprite);  //How many frames is the roll
-//image_index = min(((1 - (duration / duration)) * _totalFrames), _totalFrames - 1);
-image_speed = 0.05;
+
+//Create logic for sprite drawing speed
+
+if (image_index < damageSprite) image_speed = 0.3;
+else image_speed = 0.5;
+
+
+//Hitbox when
+if (image_index >= damageSprite) 
+{
+	if (!instance_exists(oBasicHB)){
+		with (instance_create_layer(x, y, "Basic", oBasicHB))
+		{
+			image_yscale = other.image_yscale;
+			direction = other.image_angle;
+			image_angle = direction;
+		
+		}
+	}
+}
+
+depth = pEntity.depth - 1;
+
+
 

@@ -10,7 +10,7 @@ function PlayerStateFree(){
 	if (instance_exists(oWeapon)) oWeapon.visible = true;
 
 	//Mouse facing angle
-	_mouse_dir = point_direction(x,y,mouse_x,mouse_y);
+	var _mouse_dir = point_direction(x,y,mouse_x,mouse_y);
 
 	PlayerCollision();
 	

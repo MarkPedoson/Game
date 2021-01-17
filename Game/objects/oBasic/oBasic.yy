@@ -1,14 +1,11 @@
 {
   "spriteId": {
-    "name": "sSlash",
-    "path": "sprites/sSlash/sSlash.yy",
+    "name": "sBasic",
+    "path": "sprites/sBasic/sBasic.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": {
-    "name": "sSlash",
-    "path": "sprites/sSlash/sSlash.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

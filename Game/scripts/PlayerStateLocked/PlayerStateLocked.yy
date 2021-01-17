@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player scripts",
-    "path": "folders/Scripts/Player scripts.yy",
+    "name": "PlayerState",
+    "path": "folders/Scripts/Player scripts/PlayerState.yy",
   },
   "resourceVersion": "1.0",
   "name": "PlayerStateLocked",
