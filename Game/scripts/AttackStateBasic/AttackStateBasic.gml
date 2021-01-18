@@ -1,6 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function AttackStateBasic(){
+	canBasic = false;
+	alarm[0] = basicCD;
 	//Change weapon sprite
 	
 	//Weapon lock

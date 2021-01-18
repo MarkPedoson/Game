@@ -21,7 +21,7 @@ function AttackStateFree(){
 	
 	//Attack logic
 	//attackdelay = attackdelay -1; //So that you couldn't spam attack
-	if (key_basic and (oPlayer.state == PlayerStateFree))
+	if (key_basic and (oPlayer.state == PlayerStateFree) and canBasic == true)
 	{
 		oPlayer.temp_playerimagex = oPlayer.image_xscale;
 		temp_weaponangle = image_angle;
