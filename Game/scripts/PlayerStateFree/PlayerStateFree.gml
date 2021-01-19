@@ -64,9 +64,35 @@ function PlayerStateFree(){
 	//Interaction logic
 	if (key_interact)
 	{
-		var _activateX = lengthdir_x(10, direction);
-		var _activateY = lengthdir_y(10, direction);
-		activate = instance_position(x + _activateX, y + _activateY, pEntity);
+		var _activateX = x + lengthdir_x(10, direction);
+		var _activateY = y + lengthdir_y(10, direction);
+		var _activateSize = 4;
+		var _activateList = ds_list_create();
+		activate = noone;
+		var _entitiesFound = collision_rectangle_list(
+			_activateX - _activateSize,
+			_activateY - _activateSize,
+			_activateX + _activateSize,
+			_activateY + _activateSize,
+			pEntity,
+			false,
+			true,
+			_activateList,
+			true
+		); 
+		
+		while (_entitiesFound > 0)
+		{
+			var _check = _activateList [| --_entitiesFound];
+			if /*(_check != global.iLifted) and */ (_check.entityActivateScript != -1)
+			{
+				activate = _check;
+				break;
+			}
+		}
+		
+		ds_list_destroy(_activateList);
+		//activate = instance_position(x + _activateX, y + _activateY, pEntity);
 		if (activate == noone or activate.entityActivateScript == -1)
 		{
 			//do_nothing

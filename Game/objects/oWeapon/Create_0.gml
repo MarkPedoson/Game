@@ -4,5 +4,5 @@ temp_weaponimagey = 1;
 
 spriteWeapon = sClaw;
 
-basicCD = 15;
+basicCD = 13;
 canBasic = true;

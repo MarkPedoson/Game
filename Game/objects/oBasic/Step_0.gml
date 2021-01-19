@@ -32,8 +32,7 @@ if (image_index >= damageSprite)
 		}
 	}
 }
-
-depth = pEntity.depth - 1;
+ if (instance_exists(pEntity)) depth = pEntity.depth - 1;
 
 
 

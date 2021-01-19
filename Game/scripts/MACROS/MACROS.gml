@@ -4,3 +4,7 @@
 #macro ROOM_START rStartArena
 #macro RESOLUTION_W 640
 #macro RESOLUTION_H 360
+
+#macro	TRANSITION_SPEED 0.02
+#macro	IN 1
+#macro	OUT 0

@@ -5,4 +5,4 @@ key_basic = mouse_check_button_pressed(mb_left);
 if (!global.gamePaused) script_execute(attackState);
 
 //Draw over player
-depth = oPlayer.depth - 1;
+if (instance_exists(oPlayer)) depth = oPlayer.depth - 1;

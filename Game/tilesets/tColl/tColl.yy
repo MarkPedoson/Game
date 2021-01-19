@@ -1,5 +1,4 @@
 {
-  "name": "tColl",
   "spriteId": {
     "name": "sColl",
     "path": "sprites/sColl/sColl.yy",
@@ -41,6 +40,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "tColl",
   "tags": [],
   "resourceType": "GMTileSet",
 }

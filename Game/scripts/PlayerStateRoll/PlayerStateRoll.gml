@@ -16,7 +16,6 @@ function PlayerStateRoll(){
 	sprite_index = spriteRoll;
 	var _totalFrames = sprite_get_number(sprite_index);  //How many frames is the roll
 	image_index = min(((1 - (moveDistanceRemaining / rolldist)) * _totalFrames), _totalFrames - 1);
-	show_debug_message(string(image_index));
 	
 	//Change height
 	z = sin(((moveDistanceRemaining / rolldist) * pi)) * rollheight;

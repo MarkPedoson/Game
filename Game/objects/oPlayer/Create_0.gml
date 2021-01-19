@@ -25,3 +25,11 @@ spriteIdle = sPlayer;
 localFrame = 0;
 
 temp_playerimagex = 1;
+
+//Transitioning to new room
+if (global.targetX != -1)
+{
+	x = global.targetX;
+	y = global.targetY;
+	direction = global.targetDirection;
+}
