@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBasic",
-    "path": "sprites/sBasic/sBasic.yy",
+    "name": "sClawBasic",
+    "path": "sprites/sClawBasic/sClawBasic.yy",
   },
   "solid": false,
   "visible": true,

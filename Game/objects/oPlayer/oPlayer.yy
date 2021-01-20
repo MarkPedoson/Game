@@ -1,13 +1,13 @@
 {
   "spriteId": {
-    "name": "sPlayer",
-    "path": "sprites/sPlayer/sPlayer.yy",
+    "name": "sCerberusIdle",
+    "path": "sprites/sCerberusIdle/sCerberusIdle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "sPlayer",
-    "path": "sprites/sPlayer/sPlayer.yy",
+    "name": "sCerberusIdle",
+    "path": "sprites/sCerberusIdle/sCerberusIdle.yy",
   },
   "persistent": false,
   "parentObjectId": null,

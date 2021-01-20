@@ -19,9 +19,9 @@ hp = 3; //health
 
 
 
-spriteRoll = sPlayerRoll;
-spriteRun = sPlayerRun;
-spriteIdle = sPlayer;
+spriteRoll = sCerberusRoll;
+spriteRun = sCerberusRun;
+spriteIdle = sCerberusIdle;
 localFrame = 0;
 
 temp_playerimagex = 1;

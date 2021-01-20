@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayerD",
-    "path": "sprites/sPlayerD/sPlayerD.yy",
+    "name": "sCerberusD",
+    "path": "sprites/sCerberusD/sCerberusD.yy",
   },
   "solid": false,
   "visible": true,

@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"de8c1427-35de-4b6a-9e1d-5da6b12e7c13","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Claw",
+    "path": "folders/Sprites/Cerberus_player/Claw.yy",
   },
   "resourceVersion": "1.0",
   "name": "sClaw",

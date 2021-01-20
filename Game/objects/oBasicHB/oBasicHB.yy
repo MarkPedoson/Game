@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBasicHB",
-    "path": "sprites/sBasicHB/sBasicHB.yy",
+    "name": "sClawBasicHB",
+    "path": "sprites/sClawBasicHB/sClawBasicHB.yy",
   },
   "solid": false,
   "visible": false,

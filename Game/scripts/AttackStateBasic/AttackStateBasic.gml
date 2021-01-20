@@ -27,7 +27,7 @@ function AttackStateBasic(){
 			}
 	}
 	//Change state
-	if (oBasic.image_index >= sprite_get_number(sBasic)) 
+	if (oBasic.image_index >= sprite_get_number(spriteBasic)) 
 	{	
 		attackState = AttackStateFree; 
 	}
