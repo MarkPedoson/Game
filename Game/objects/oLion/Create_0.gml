@@ -5,6 +5,7 @@ state = ENEMYSTATE.WANDER;
 
 //Enemy sprite
 sprMove = sLionRun;
+sprIdle = sLionIdle;
 //sprAttack = sLionAttack;
 
 

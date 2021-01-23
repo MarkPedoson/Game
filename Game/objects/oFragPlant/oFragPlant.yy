@@ -31,8 +31,8 @@
     {"propertyId":{"name":"deteriorateTime","path":"objects/oFragment/oFragment.yy",},"objectId":{"name":"oFragment","path":"objects/oFragment/oFragment.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Fragments",
+    "path": "folders/Objects/Fragments.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFragPlant",

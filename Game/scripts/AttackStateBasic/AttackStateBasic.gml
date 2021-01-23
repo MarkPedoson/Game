@@ -7,7 +7,7 @@ function AttackStateBasic(){
 	
 	//Weapon lock
 	x = oPlayer.x;
-	y = oPlayer.y - 12;
+	y = oPlayer.y - 10;
 	
 	image_angle = temp_weaponangle;
 	image_yscale = temp_weaponimagey;

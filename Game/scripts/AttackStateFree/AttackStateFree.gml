@@ -6,7 +6,7 @@ function AttackStateFree(){
 	
 	//Attaching weapon to the player sprite
 	x = oPlayer.x;
-	y = oPlayer.y - 12;  //Move it with +/- to make it stick to sPlayer
+	y = oPlayer.y - 10;  //Move it with +/- to make it stick to sPlayer
 	
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 	

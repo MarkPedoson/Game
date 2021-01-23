@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionWander(){
 	sprite_index = sprMove;
+	image_speed = 0.5;
 	
 	//At destination or given up
 	if ((x == xTo) and (y = yTo)) or (timePassed > enemyWanderDist / enemySpeed)
@@ -9,9 +10,7 @@ function LionWander(){
 		hsp = 0;
 		vsp = 0;
 		
-		//End our move animation
-		image_speed = 0.0;
-		image_index = 0;
+	
 		
 		//Set new target destination
 		if (++wait >= waitDuration)
@@ -33,6 +32,7 @@ function LionWander(){
 		hsp = lengthdir_x(_speedThisFrame, dir);
 		vsp = lengthdir_y(_speedThisFrame, dir);
 		if (hsp != 0) image_xscale = sign(hsp);
+		
 		//Enemy tile collision
 		var _collided = EnemyTileCollision();
 		
@@ -47,5 +47,11 @@ function LionWander(){
 			state = ENEMYSTATE.CHASE;
 			target = oPlayer;
 		}
+	}
+	
+	if (hsp == 0 and vsp == 0)
+	{
+		sprite_index = sprIdle;
+		image_speed = 0.5;
 	}
 }

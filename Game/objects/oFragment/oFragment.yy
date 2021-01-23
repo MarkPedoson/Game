@@ -31,8 +31,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Fragments",
+    "path": "folders/Objects/Fragments.yy",
   },
   "resourceVersion": "1.0",
   "name": "oFragment",
