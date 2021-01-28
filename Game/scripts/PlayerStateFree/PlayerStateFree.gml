@@ -26,7 +26,6 @@ function PlayerStateFree(){
 
 
 	//Switches player sprite animation
-	var _oldSprite = sprite_index;
 	if (hsp == 0) and (vsp == 0)
 	{
 		sprite_index = spriteIdle;	
@@ -44,7 +43,6 @@ function PlayerStateFree(){
 			image_speed = 1;
 		}
 	}
-	if (_oldSprite != sprite_index) localFrame = 0;  //Resets the sprite every time
 	
 	//Change state for dodge rolling
 	if (key_roll)

@@ -1,19 +1,22 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionChase(){
-	sprite_index = sprMove;
+	sprite_index = sprChase;
+	image_speed = 0.75;
+	
 	if (instance_exists(target))
 	{
 		xTo = target.x;
 		yTo = target.y;
+		var _enemySpeed = enemySpeed + 0.5;
 		
 		var _distanceToGo = point_distance(x, y, xTo, yTo);
-		image_speed = 1.0;
+		
 		dir = point_direction(x, y, xTo, yTo);
-		if (_distanceToGo > enemySpeed)
+		if (_distanceToGo > _enemySpeed)
 		{
-			hsp = lengthdir_x(enemySpeed, dir);
-			vsp = lengthdir_y(enemySpeed, dir);
+			hsp = lengthdir_x(_enemySpeed, dir);
+			vsp = lengthdir_y(_enemySpeed, dir);
 		}
 		else
 		{
@@ -29,13 +32,28 @@ function LionChase(){
 	//Check if close enough to attack
 	if (instance_exists(target)) and (point_distance(x, y, target.x, target.y) <= enemyAttackRad)
 	{
+		image_index = 0;
 		state = ENEMYSTATE.ATTACK;
 		//sprite_index = sprAttack;
-		image_speed = 1.0;
-		image_index = 0;
+
 		//Character is 32px wide so 16 px to be on the edge
-		xTo += lengthdir_x(16, dir);
-		yTo += lengthdir_y(-16, dir);
+		attackX = x - lengthdir_x(-8, dir);
+		attackY = y - lengthdir_y(-8, dir);
 		
 	}
+	
+	//Check for aggro distance
+	if (++aggroCheck >= aggroCheckDuration)
+	{
+		aggroCheck = 0;
+		if (point_distance(x, y, xstart, ystart) >= resetRad) 
+		{
+			hsp = 0;
+			vsp = 0;
+			image_index = 0;
+			image_speed = 0;
+			state = ENEMYSTATE.RETURNING;
+		}
+	}
+
 }

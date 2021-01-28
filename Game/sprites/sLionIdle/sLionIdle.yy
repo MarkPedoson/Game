@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 7,
@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 30,
-  "bbox_top": 0,
+  "bbox_top": 13,
   "bbox_bottom": 31,
   "HTile": false,
   "VTile": false,
@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"752d72dc-e64e-4e54-877b-8d28c4cabce9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Lion",
+    "path": "folders/Sprites/Lion.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLionIdle",

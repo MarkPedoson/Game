@@ -3,6 +3,8 @@ state = PlayerStateFree;
 lastState = state;
 collisionMap = layer_tilemap_get_id(layer_get_id("Tile"));
 
+image_speed = 0;
+
 //Movement
 z = 0; //setting z value
 flash = 0; //Getting damaged
@@ -22,7 +24,7 @@ hp = 3; //health
 spriteRoll = sCerberusRoll;
 spriteRun = sCerberusRun;
 spriteIdle = sCerberusIdle;
-localFrame = 0;
+
 
 temp_playerimagex = 1;
 

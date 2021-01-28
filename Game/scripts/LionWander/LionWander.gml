@@ -5,12 +5,10 @@ function LionWander(){
 	image_speed = 0.5;
 	
 	//At destination or given up
-	if ((x == xTo) and (y = yTo)) or (timePassed > enemyWanderDist / enemySpeed)
+	if ((x == xTo) and (y == yTo)) or (timePassed > enemyWanderDist / enemySpeed)
 	{
 		hsp = 0;
 		vsp = 0;
-		
-	
 		
 		//Set new target destination
 		if (++wait >= waitDuration)
@@ -46,6 +44,28 @@ function LionWander(){
 		{
 			state = ENEMYSTATE.CHASE;
 			target = oPlayer;
+		}
+	}
+	
+	//Check for idle
+	if (++idleCheck >= idleCheckDuration)
+	{
+		idleCheck = 0;
+		if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) >= enemyActivationRad)
+		{
+			deactivateTime++;
+			if (deactivateTime >= enemyDeactivateTime)
+			{
+				hsp = 0;
+				vsp = 0;
+				deactivateTime = 0;
+				state = ENEMYSTATE.IDLE;
+				//sprite_index = sprSleep; go to sleep
+			}
+		}
+		else if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad)
+		{
+			deactivateTime = 0;
 		}
 	}
 	

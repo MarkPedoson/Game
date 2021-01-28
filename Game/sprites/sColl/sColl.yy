@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"10ad15f1-bcc5-4a3e-af20-af6f01d52653","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Tilesets and Gamesprites",
+    "path": "folders/Sprites/Tilesets and Gamesprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sColl",

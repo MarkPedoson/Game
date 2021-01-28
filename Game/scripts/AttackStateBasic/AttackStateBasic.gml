@@ -26,8 +26,9 @@ function AttackStateBasic(){
 			
 			}
 	}
+	
 	//Change state
-	if (oBasic.image_index >= sprite_get_number(spriteBasic)) 
+	if (floor(oBasic.image_index) >= sprite_get_number(spriteBasic)-1) //I have added 1 more frame to attack, as that will be deletion frame
 	{	
 		attackState = AttackStateFree; 
 	}

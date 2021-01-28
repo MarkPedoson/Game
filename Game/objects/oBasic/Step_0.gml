@@ -2,7 +2,7 @@
 
 sprite_index = basicSprite;
 
-
+//Weapon location
 x = oPlayer.x;
 y = oPlayer.y - 12;
 
@@ -20,7 +20,7 @@ else image_speed = 0.5;
 
 
 //Hitbox when
-if (image_index >= damageSprite) 
+if (image_index >= damageSprite) and (image_index < sprite_get_number(basicSprite)-1)
 {
 	if (!instance_exists(oBasicHB)){
 		with (instance_create_layer(x, y, "Basic", oBasicHB))

@@ -1,4 +1,5 @@
 if (entityShadow) draw_sprite(sShadow, 0, floor(x), floor(y));
+if (entityShadow4) draw_sprite(sShadow4, 0, floor(x), floor(y));
 
 if (flash != 0)
 {

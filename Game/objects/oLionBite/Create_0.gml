@@ -1,0 +1,1 @@
+damageSprite = 2;

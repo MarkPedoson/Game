@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9d3aaa85-b39d-4dbc-aee5-2b20c857e5a8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Tilesets and Gamesprites",
+    "path": "folders/Sprites/Tilesets and Gamesprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTile",
