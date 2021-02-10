@@ -4,6 +4,18 @@ function PlayerCollision(){
 	var _collision = false;
 	var _entityList = ds_list_create();
 	
+	
+	//Reapply frac
+	hsp += hsp_frac;
+	vsp += vsp_frac;
+	
+	//Store and remove frac (so no jittery collision effects would raise)
+	hsp_frac = hsp - (floor(abs(hsp)) * sign(hsp));
+	hsp -= hsp_frac;
+	vsp_frac = vsp - (floor(abs(vsp)) * sign(vsp));
+	vsp -= vsp_frac;
+	
+	
 	//Horizontal Tiles
 	if (tilemap_get_at_pixel(collisionMap, x+hsp, y))
 	{
@@ -34,7 +46,7 @@ function PlayerCollision(){
 	}
 	
 	//Horizontal move commit
-	x += hsp;
+	x = x + hsp;
 	
 	//Clear list between axis
 	ds_list_clear(_entityList);
@@ -48,8 +60,6 @@ function PlayerCollision(){
 		_collision = true;
 	}
 	
-	//Vertical move commit
-	y += vsp;
 	
 	//Vertical entities
 	var _entityCount = instance_position_list(x, y + vsp, pEntity, _entityList, false);
@@ -70,6 +80,9 @@ function PlayerCollision(){
 		ds_list_delete(_entityList, 0);
 		_entityCount--;
 	}
+	
+	//Vertical move commit
+	y = y + vsp;
 	
 	ds_list_destroy(_entityList);
 	

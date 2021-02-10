@@ -3,9 +3,9 @@
 function PlayerStateFree(){
 	
 	//Movement
-	hsp = lengthdir_x(input_magnitude * walksp, input_direction);
-	vsp = lengthdir_y(input_magnitude * walksp, input_direction);
-	
+	hsp = (lengthdir_x(input_magnitude * walksp, input_direction));
+	vsp = (lengthdir_y(input_magnitude * walksp, input_direction));
+
 	//Show weapon
 	if (instance_exists(oWeapon)) oWeapon.visible = true;
 
@@ -32,20 +32,12 @@ function PlayerStateFree(){
 	}
 	else
 	{	
-		if (input_direction != _mouse_dir)  //If the mouse direction and movement conflict plays
-		{
-			sprite_index = spriteRun; 
-			image_speed = -1;
-		}
-		else
-		{
-			sprite_index = spriteRun;
-			image_speed = 1;
-		}
+		sprite_index = spriteRun;
+		image_speed = 1;
 	}
 	
 	//Change state for dodge rolling
-	if (key_roll)
+	if (key_roll) and (oWeapon.attackState == AttackStateFree)
 	{	
 		if (input_magnitude)
 		{
@@ -60,7 +52,7 @@ function PlayerStateFree(){
 	}
 	
 	//Interaction logic
-	if (key_interact)
+	if (key_interact) and (oWeapon.attackState == AttackStateFree)
 	{
 		var _activateX = x + lengthdir_x(10, direction);
 		var _activateY = y + lengthdir_y(10, direction);

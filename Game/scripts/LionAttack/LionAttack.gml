@@ -1,23 +1,33 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionAttack(){
-	hsp = 0;
-	vsp = 0;
+	sprite_index = sprAttack;
+	image_speed = 0.75;
 	
+	var _attackX = x + image_xscale * attackX;
+	var _attackY = y + attackY;
+	
+	//Attack itself
 	if (!instance_exists(oLionBite))
 	{
-		with (instance_create_layer(attackX, attackY, "Enemy_attack", oLionBite))
+		with (instance_create_layer(_attackX, _attackY, "Instance", oLionBite))
 		{
-			
-			
+			owner = other.id;
+			image_yscale = other.image_xscale;
+			direction = point_direction(x, y, other.target.x, other.target.y - 10); //Other target is the player itself
+			image_angle = direction;
+			x = x - lengthdir_x(-16, direction);
+			y = y - lengthdir_y(-16, direction);
 			
 		}
 	}
 
-	
-	if (floor(oLionBite.image_index) >= sprite_get_number(attackSpr) -1) 
+	//Once attack is over then waits and transitions
+	if (image_index + ((image_speed * sprite_get_speed(sprite_index)) / game_get_speed(gamespeed_fps)) >= image_number)
 	{	
-		image_index = 0;
+		//Idle sprite, because when it waits it will replay attack otherwise
+		sprite_index = sprIdle;
+		image_speed = 0.5;
 		stateTarget = ENEMYSTATE.CHASE; 
 		stateWaitDuration = 15;
 		state = ENEMYSTATE.WAIT;

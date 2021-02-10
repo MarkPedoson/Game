@@ -2,12 +2,16 @@
 state = PlayerStateFree;
 lastState = state;
 collisionMap = layer_tilemap_get_id(layer_get_id("Tile"));
+damage_list = -1;  //For calculating who gets hit
 
 image_speed = 0;
 
 //Movement
 z = 0; //setting z value
 flash = 0; //Getting damaged
+hsp_frac = 0;
+vsp_frac = 0;
+invFramePlayer = false;
 
 hsp = 0; //horizontal speed
 vsp = 0; //vertical speed
@@ -21,12 +25,10 @@ hp = 3; //health
 
 
 
-spriteRoll = sCerberusRoll;
+spriteRoll = sCerberusRollAlt;
 spriteRun = sCerberusRun;
 spriteIdle = sCerberusIdle;
 
-
-temp_playerimagex = 1;
 
 //Transitioning to new room
 if (global.targetX != -1)

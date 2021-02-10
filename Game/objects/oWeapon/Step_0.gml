@@ -2,6 +2,10 @@
 key_basic = mouse_check_button_pressed(mb_left);
 
 
+//Weapon lock
+x = oPlayer.x;
+y = oPlayer.y - 10;
+
 if (!global.gamePaused) script_execute(attackState);
 
 //Draw over player

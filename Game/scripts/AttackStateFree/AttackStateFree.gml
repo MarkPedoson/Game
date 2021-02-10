@@ -3,10 +3,8 @@
 function AttackStateFree(){
 	//Changing back to default sprite
 	sprite_index = spriteWeapon;
-	
-	//Attaching weapon to the player sprite
-	x = oPlayer.x;
-	y = oPlayer.y - 10;  //Move it with +/- to make it stick to sPlayer
+	image_index = 0;
+	image_speed = 0;
 	
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 	
@@ -21,9 +19,10 @@ function AttackStateFree(){
 	//Attack logic
 	if (key_basic and (oPlayer.state == PlayerStateFree) and canBasic == true)
 	{
-		oPlayer.temp_playerimagex = oPlayer.image_xscale;
-		temp_weaponangle = image_angle;
-		temp_weaponimagey = image_yscale;
+		if (!ds_exists(playerChar.damage_list, ds_type_list)) playerChar.damage_list = ds_list_create();
+		ds_list_clear(playerChar.damage_list);
+		canBasic = false;
+		alarm[0] = basicCD;
 		attackState = AttackStateBasic;
 	}
 }

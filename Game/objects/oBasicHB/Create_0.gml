@@ -1,1 +1,2 @@
-damage_list = ds_list_create();
+weaponInfo = oWeapon;
+playerInfo = oPlayer;

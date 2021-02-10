@@ -4,7 +4,19 @@ function LionChase(){
 	sprite_index = sprChase;
 	image_speed = 0.75;
 	
-	if (instance_exists(target))
+	//Check if close enough to attack
+	if (instance_exists(target)) and (point_distance(x, y, target.x, target.y) <= enemyAttackRad)
+	{
+		hsp = 0;
+		vsp = 0;
+		image_index = 0;
+		image_speed = 0;
+		state = ENEMYSTATE.ATTACK;
+		//sprite_index = sprAttack;
+		
+	}
+	
+	if (instance_exists(target)) and (point_distance(x, y, target.x, target.y) > enemyAttackRad)
 	{
 		xTo = target.x;
 		yTo = target.y;
@@ -29,18 +41,6 @@ function LionChase(){
 		var _collision = EnemyTileCollision();
 	}
 	
-	//Check if close enough to attack
-	if (instance_exists(target)) and (point_distance(x, y, target.x, target.y) <= enemyAttackRad)
-	{
-		image_index = 0;
-		state = ENEMYSTATE.ATTACK;
-		//sprite_index = sprAttack;
-
-		//Character is 32px wide so 16 px to be on the edge
-		attackX = x - lengthdir_x(-8, dir);
-		attackY = y - lengthdir_y(-8, dir);
-		
-	}
 	
 	//Check for aggro distance
 	if (++aggroCheck >= aggroCheckDuration)

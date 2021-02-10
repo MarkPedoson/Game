@@ -1,9 +1,12 @@
 attackState = AttackStateFree;
-temp_weaponangle = point_direction(x,y, mouse_x, mouse_y);
-temp_weaponimagey = 1;
+playerChar = oPlayer;
 
 spriteWeapon = sClaw;
 spriteBasic = sClawBasic;
 
-basicCD = 13;
+
+basicCD = room_speed * 0.5;
+basicDMG = 2;
 canBasic = true;
+
+basicDamageSprite = 4;

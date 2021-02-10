@@ -15,8 +15,9 @@ wait = 0;
 resetRad = 250;
 teleporting = false;
 
-attackX = 0;
-attackY = 0;
+wake_up = false;
+fall_asleep = false;
+
 
 stateTarget = state;
 statePrevious = state;

@@ -1,5 +1,15 @@
-if (entityShadow) draw_sprite(sShadow, 0, floor(x), floor(y));
-if (entityShadow4) draw_sprite(sShadow4, 0, floor(x), floor(y));
+if (entityShadow != -1)
+{
+	switch (entityShadow)
+	{
+		case 1:
+			draw_sprite(sShadow, 0, floor(x), floor(y));
+			break;
+		case 2:
+			draw_sprite(sShadow2, 0, floor(x), floor(y));
+			break;			
+	}
+}
 
 if (flash != 0)
 {

@@ -1,35 +1,28 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function AttackStateBasic(){
-	canBasic = false;
-	alarm[0] = basicCD;
 	//Change weapon sprite
+	sprite_index = spriteBasic;
+	if (image_index < basicDamageSprite - 1) image_speed = 0.3;
+	else image_speed = 0.5;
 	
-	//Weapon lock
-	x = oPlayer.x;
-	y = oPlayer.y - 10;
-	
-	image_angle = temp_weaponangle;
-	image_yscale = temp_weaponimagey;
-	
-	
-	oPlayer.image_xscale = oPlayer.temp_playerimagex;
-	
-	if (!instance_exists(oBasic)){
-		with (instance_create_layer(x,y,"Basic", oBasic)) 
+	//Hitbox when
+	if (image_index >= basicDamageSprite) and (image_index < sprite_get_number(sprite_index)-1)
+	{
+		if (!instance_exists(oBasicHB)){
+			with (instance_create_layer(x, y, "Instance", oBasicHB))
 			{
 				image_yscale = other.image_yscale;
 				direction = other.image_angle;
 				image_angle = direction;
-				x = x - lengthdir_x(-16, direction);
-				y = y - lengthdir_y(-16, direction);
-			
 			}
+		}
 	}
 	
 	//Change state
-	if (floor(oBasic.image_index) >= sprite_get_number(spriteBasic)-1) //I have added 1 more frame to attack, as that will be deletion frame
+	if (image_index + ((image_speed * sprite_get_speed(sprite_index)) / game_get_speed(gamespeed_fps)) >= image_number) //I have added 1 more frame to attack, as that will be deletion frame
 	{	
+		ds_list_destroy(playerChar.damage_list);
 		attackState = AttackStateFree; 
 	}
 	

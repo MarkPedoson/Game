@@ -21,23 +21,14 @@ function PlayerStateTransition(){
 
 
 	//Switches player sprite animation
-	var _oldSprite = sprite_index;
 	if (hsp == 0) and (vsp == 0)
 	{
 		sprite_index = spriteIdle;	
 	}
 	else
 	{	
-		if (input_direction != _mouse_dir)  //If the mouse direction and movement conflict plays
-		{
-			sprite_index = spriteRun; 
-			image_speed = -1;
-		}
-		else
-		{
-			sprite_index = spriteRun;
-			image_speed = 1;
-		}
+		sprite_index = spriteRun;
+		image_speed = 1;
+		
 	}
-	if (_oldSprite != sprite_index) localFrame = 0;  //Resets the sprite every time
 }
