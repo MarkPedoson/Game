@@ -47,43 +47,4 @@ spriteIdle = sCerberusIdle;
 
 
 //Transitioning to new room
-if (global.targetX != -1)
-{
-	x = global.targetX;
-	y = global.targetY;
-	direction = global.targetDirection;
-	
-	//Lets add the weapon back
-	if (global.prevWeapon != -1)
-	{
-		if (global.prevWeapon == WEAPON.CLAW)
-		{
-			with (instance_create_layer(oPlayer.x, (oPlayer.y - oPlayer.z) - 10, "Instance", oClaw))
-			{
-				ownerChar = other.id;
-				other.currentWeapon = id;
-			}
-			basicIcon = currentWeapon.basicIcon;
-			basicIconAct = currentWeapon.basicIconAct;
-			altIcon = currentWeapon.altIcon;
-		}
-		else if (global.prevWeapon == WEAPON.SPEAR)
-		{
-			with (instance_create_layer(oPlayer.x, (oPlayer.y - oPlayer.z) - 10, "Instance", oSpear))
-			{
-				ownerChar = other.id;
-				other.currentWeapon = id;
-			}
-			basicIcon = currentWeapon.basicIcon;
-			basicIconAct = currentWeapon.basicIconAct;
-			altIcon = currentWeapon.altIcon;
-		}
-	}
-	
-	//Reset the var
-	global.targetX = -1;
-	global.targetY = -1;
-	global.targetDirection = 0;
-	global.targetRoom = -1;
-	global.prevWeapon = -1;
-}
+TransitionScript(oClaw, WEAPON.CLAW, oSpear, WEAPON.SPEAR);

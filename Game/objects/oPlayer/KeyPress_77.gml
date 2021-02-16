@@ -1,13 +1,7 @@
+//Claw weapon switch
 if (currentWeapon == noone)
 {
-	with (instance_create_layer(oPlayer.x, (oPlayer.y - oPlayer.z) - 10, "Instance", oClaw))
-	{
-		ownerChar = other.id;
-		other.currentWeapon = id;
-	}
-	basicIcon = currentWeapon.basicIcon;
-	basicIconAct = currentWeapon.basicIconAct;
-	altIcon = currentWeapon.altIcon;
+	SwitchWeapons(oClaw);
 }
 else 
 {
@@ -22,13 +16,6 @@ else
 	else
 	{
 		instance_destroy(currentWeapon);
-		with (instance_create_layer(oPlayer.x, (oPlayer.y - oPlayer.z) - 10, "Instance", oClaw))
-		{
-			ownerChar = other.id;
-			other.currentWeapon = id;
-		}
-		basicIcon = currentWeapon.basicIcon;
-		basicIconAct = currentWeapon.basicIconAct;
-		altIcon = currentWeapon.altIcon;
+		SwitchWeapons(oClaw);
 	}
 }

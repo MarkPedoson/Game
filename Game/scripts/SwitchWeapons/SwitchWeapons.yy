@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "UI",
-    "path": "folders/Scripts/UI.yy",
+    "name": "Player scripts",
+    "path": "folders/Scripts/Player scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "DrawRectangleCd",
+  "name": "SwitchWeapons",
   "tags": [],
   "resourceType": "GMScript",
 }

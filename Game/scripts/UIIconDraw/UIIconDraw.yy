@@ -6,7 +6,7 @@
     "path": "folders/Scripts/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "DrawRectangleCd",
+  "name": "UIIconDraw",
   "tags": [],
   "resourceType": "GMScript",
 }
