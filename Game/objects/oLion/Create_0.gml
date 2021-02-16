@@ -14,12 +14,12 @@ sprWake = sLionSleepDrop2;
 sprFall = sLionSleepDrop;
 sprReturn = sLionReturn;
 sprReturn2 = sLionReturn2;
+sprAttack = sLionAttack;
 
 
 attackX = 8 //x24
 attackY = -10 //y12
-attackSpr = sLionBite;
-sprAttack = sLionAttack;
+
 
 
 //Enemy script

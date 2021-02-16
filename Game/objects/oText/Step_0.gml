@@ -52,7 +52,7 @@ if ((mouse_y < (textY + _textMessageY + _lastResponse))
 	var bottomEdgeY = textY + _textMessageY + _lastResponse;
 	var tempResponseSelected = ((bottomEdgeY - mouse_y) div (_newlineHeight));
 	responseSelected = _max - tempResponseSelected;
-	if (mouse_check_button_pressed(mb_left))
+	if (mouse_check_button_released(mb_left))
 	{
 		var _messageLength = string_length(textMessage);
 		if (textProgress >= _messageLength)
@@ -82,7 +82,7 @@ if ((mouse_y < (textY + _textMessageY + _lastResponse))
 }
 else if (arrayResponses[0] == -1)
 {
-	if (mouse_check_button_pressed(mb_left))
+	if (mouse_check_button_released(mb_left))	
 	{
 		var _messageLength = string_length(textMessage);
 		if (textProgress >= _messageLength)

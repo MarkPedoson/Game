@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionChase(){
+	if (instance_exists(target)) and (target.state == PlayerStateDead) state = ENEMYSTATE.WANDER;
 	sprite_index = sprChase;
 	image_speed = 0.75;
 	

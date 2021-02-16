@@ -1,9 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerStateTransition(){
-	//Show weapon
-	if (instance_exists(oWeapon)) oWeapon.visible = true;
-
 	//Mouse facing angle
 	var _mouse_dir = point_direction(x,y,mouse_x,mouse_y);
 
@@ -28,7 +25,6 @@ function PlayerStateTransition(){
 	else
 	{	
 		sprite_index = spriteRun;
-		image_speed = 1;
-		
+		image_speed = 1;	
 	}
 }

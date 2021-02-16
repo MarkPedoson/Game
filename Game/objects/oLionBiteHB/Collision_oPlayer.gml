@@ -1,0 +1,1 @@
+HurtPlayer(other, point_direction(owner.x, owner.y, other.x, other.y), owner.enemyForce, owner.enemyDamage);

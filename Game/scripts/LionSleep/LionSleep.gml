@@ -12,7 +12,7 @@ function LionSleep(){
 		{
 		
 			idleCheck = 0;
-			if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad)
+			if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad) and (oPlayer.state != PlayerStateDead)
 			{
 				wake_up = true;
 				image_index = 0;

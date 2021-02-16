@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Cerberus_player",
-    "path": "folders/Sprites/Cerberus_player.yy",
+    "path": "folders/Sprites/Player/Cerberus_player.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCerberusIdle",

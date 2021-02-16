@@ -1,12 +1,15 @@
-attackState = AttackStateFree;
-playerChar = oPlayer;
+state = WEAPONSTATE.FREE;
+prevstate = -1;
 
-spriteWeapon = sClaw;
-spriteBasic = sClawBasic;
+ownerChar = -1;
+yChar = -10;
 
-
-basicCD = room_speed * 0.5;
-basicDMG = 2;
+//Skills
 canBasic = true;
+basicCDTimer = 0;
 
-basicDamageSprite = 4;
+//Scripts
+weaponCharScript[WEAPONSTATE.FREE] = -1;
+weaponCharScript[WEAPONSTATE.BASIC] = -1;
+weaponCharScript[WEAPONSTATE.ALT] = -1;
+weaponCharScript[WEAPONSTATE.LOCKED] = WeaponLocked;

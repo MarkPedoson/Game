@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7607578d-5466-42b7-9841-948dd12bbc47","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Tilesets and Gamesprites",
-    "path": "folders/Sprites/Tilesets and Gamesprites.yy",
+    "name": "Buildingblocks",
+    "path": "folders/Sprites/Tilesets and Gamesprites/Buildingblocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTrigger",

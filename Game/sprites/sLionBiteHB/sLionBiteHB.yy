@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Lion",
-    "path": "folders/Sprites/Lion.yy",
+    "path": "folders/Sprites/AI/Lion.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLionBiteHB",

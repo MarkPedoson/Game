@@ -23,5 +23,6 @@ function LionHurt(){
 		x = xTo;
 		y = yTo;
 		state = ENEMYSTATE.CHASE;
+		target = oPlayer;
 	}
 }

@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"05f71b74-03e0-45cb-ae77-1524d776e79a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Tilesets and Gamesprites",
-    "path": "folders/Sprites/Tilesets and Gamesprites.yy",
+    "name": "UI",
+    "path": "folders/Sprites/UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTextBoxBg",

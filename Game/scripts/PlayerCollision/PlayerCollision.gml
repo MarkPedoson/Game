@@ -10,9 +10,9 @@ function PlayerCollision(){
 	vsp += vsp_frac;
 	
 	//Store and remove frac (so no jittery collision effects would raise)
-	hsp_frac = hsp - (floor(abs(hsp)) * sign(hsp));
+	hsp_frac = frac(hsp);
 	hsp -= hsp_frac;
-	vsp_frac = vsp - (floor(abs(vsp)) * sign(vsp));
+	vsp_frac = frac(vsp);
 	vsp -= vsp_frac;
 	
 	

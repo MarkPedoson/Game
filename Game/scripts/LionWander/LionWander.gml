@@ -54,7 +54,7 @@ function LionWander(){
 	if (++aggroCheck >= aggroCheckDuration)
 	{
 		aggroCheck = 0;
-		if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) <= enemyAggroRad)
+		if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) <= enemyAggroRad) and (oPlayer.state != PlayerStateDead)
 		{
 			state = ENEMYSTATE.CHASE;
 			target = oPlayer;
@@ -65,7 +65,7 @@ function LionWander(){
 	if (++idleCheck >= idleCheckDuration)
 	{
 		idleCheck = 0;
-		if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) >= enemyActivationRad)
+		if (instance_exists(oPlayer)) and ((point_distance(x, y, oPlayer.x, oPlayer.y) >= enemyActivationRad) or (oPlayer.state == PlayerStateDead))
 		{
 			deactivateTime++;
 			if (deactivateTime >= enemyDeactivateTime)
@@ -77,7 +77,7 @@ function LionWander(){
 				image_index = 0;
 			}
 		}
-		else if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad)
+		else if (instance_exists(oPlayer)) and (oPlayer.state != PlayerStateDead) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad)
 		{
 			deactivateTime = 0;
 		}

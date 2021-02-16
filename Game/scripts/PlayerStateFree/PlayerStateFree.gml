@@ -6,9 +6,6 @@ function PlayerStateFree(){
 	hsp = (lengthdir_x(input_magnitude * walksp, input_direction));
 	vsp = (lengthdir_y(input_magnitude * walksp, input_direction));
 
-	//Show weapon
-	if (instance_exists(oWeapon)) oWeapon.visible = true;
-
 	//Mouse facing angle
 	var _mouse_dir = point_direction(x,y,mouse_x,mouse_y);
 
@@ -37,7 +34,7 @@ function PlayerStateFree(){
 	}
 	
 	//Change state for dodge rolling
-	if (key_roll) and (oWeapon.attackState == AttackStateFree)
+	if (key_roll) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE)) and (state != PlayerStateLocked) 
 	{	
 		if (input_magnitude)
 		{
@@ -52,7 +49,7 @@ function PlayerStateFree(){
 	}
 	
 	//Interaction logic
-	if (key_interact) and (oWeapon.attackState == AttackStateFree)
+	if (key_interact) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE))
 	{
 		var _activateX = x + lengthdir_x(10, direction);
 		var _activateY = y + lengthdir_y(10, direction);

@@ -1,6 +1,8 @@
 #macro FRAME_RATE 60
 #macro TILE_SIZE 32
 #macro ROOM_START rStartArena
+#macro RES_X 96	
+#macro RES_Y 160
 #macro RESOLUTION_W 640
 #macro RESOLUTION_H 360
 
@@ -18,4 +20,35 @@ enum ENEMYSTATE
 	DIE,
 	WAIT,
 	RETURNING
+}
+
+enum WEAPONSTATE
+{
+	FREE,
+	BASIC,
+	ALT,
+	LOCKED
+}
+
+enum WEAPON
+{
+	CLAW,
+	SPEAR,
+	SHIELD
+}
+
+enum WEAPONSKIN
+{
+	BASIC,
+	ALT
+}
+
+enum PLAYERSTATE
+{
+	FREE,
+	ROLL,
+	HURT,
+	DEAD,
+	LOCKED,
+	TRANSITION
 }

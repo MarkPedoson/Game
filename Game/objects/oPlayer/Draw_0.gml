@@ -1,6 +1,21 @@
 draw_sprite(sShadow, 0, floor(x), floor(y));
 
-draw_sprite_ext(
+if (invFramePlayer == true) and (playerFlash == 0) and ((invFrameCount mod 8 < 2) == 0) and (state != PlayerStateDead)
+{
+	//For flashing;
+	invFrameCount+= 1;	
+}
+else
+{
+	
+	if (playerFlash != 0)
+	{
+		shader_set(playerFlashShader);
+		uFlashPlayer = shader_get_uniform(playerFlashShader, "flash");
+		shader_set_uniform_f(uFlashPlayer, playerFlash);
+	}
+	
+	draw_sprite_ext(
 	sprite_index,
 	image_index,
 	floor(x),
@@ -10,16 +25,10 @@ draw_sprite_ext(
 	image_angle,
 	image_blend,
 	image_alpha
-)
+	)
+	
+	if (shader_current() != -1) shader_reset();
+}
 
 
 
-//For character flashing when getting hit
-//draw_self();
-//if (flash > 0)
-//{
-//	flash--;
-//	shader_set(shWhite);
-//	draw_self();
-//	shader_reset();
-//}

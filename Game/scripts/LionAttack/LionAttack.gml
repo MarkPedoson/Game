@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionAttack(){
+	if (instance_exists(target)) and (target.state == PlayerStateDead) state = ENEMYSTATE.WANDER;
 	sprite_index = sprAttack;
 	image_speed = 0.75;
 	
@@ -23,7 +24,7 @@ function LionAttack(){
 	}
 
 	//Once attack is over then waits and transitions
-	if (image_index + ((image_speed * sprite_get_speed(sprite_index)) / game_get_speed(gamespeed_fps)) >= image_number)
+	if (oLionBite.image_index + ((oLionBite.image_speed * sprite_get_speed(oLionBite.sprite_index)) / game_get_speed(gamespeed_fps)) >= oLionBite.image_number)
 	{	
 		//Idle sprite, because when it waits it will replay attack otherwise
 		sprite_index = sprIdle;

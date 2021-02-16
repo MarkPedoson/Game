@@ -10,6 +10,12 @@ input_direction = point_direction(0,0,key_right-key_left, key_down - key_up);
 input_magnitude = (key_right - key_left != 0) or (key_down - key_up != 0);
 
 
-if (!global.gamePaused) script_execute(state); //If statement only exists to deal with paused stated
+if (!global.gamePaused) 
+{
+	script_execute(state); //If statement only exists to deal with paused stated
+	invFrameCount = max(invFrameCount - 1, 0);
+	playerFlash = max(playerFlash - 0.05, 0);
+}
+
 
 depth = -bbox_bottom;

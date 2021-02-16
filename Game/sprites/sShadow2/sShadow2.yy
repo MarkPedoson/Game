@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a41b274e-4f24-4d0c-9dac-742996df2b81","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Multi-use",
+    "path": "folders/Sprites/Tilesets and Gamesprites/Multi-use.yy",
   },
   "resourceVersion": "1.0",
   "name": "sShadow2",

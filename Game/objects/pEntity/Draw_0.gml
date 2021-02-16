@@ -1,3 +1,6 @@
+//1 = normal bipedal
+//2 = normal quadpedal
+// todo
 if (entityShadow != -1)
 {
 	switch (entityShadow)

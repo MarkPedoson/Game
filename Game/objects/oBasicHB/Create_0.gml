@@ -1,2 +1,0 @@
-weaponInfo = oWeapon;
-playerInfo = oPlayer;

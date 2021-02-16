@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sClaw",
-    "path": "sprites/sClaw/sClaw.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -23,13 +20,12 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oWeapon","path":"objects/oWeapon/oWeapon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oWeapon","path":"objects/oWeapon/oWeapon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"parent":{"name":"oWeapon","path":"objects/oWeapon/oWeapon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Weapons",
+    "path": "folders/Objects/Player/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWeapon",
