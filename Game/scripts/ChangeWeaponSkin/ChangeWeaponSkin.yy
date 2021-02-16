@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Player scripts/Weapon scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ChangeWeapon",
+  "name": "ChangeWeaponSkin",
   "tags": [],
   "resourceType": "GMScript",
 }

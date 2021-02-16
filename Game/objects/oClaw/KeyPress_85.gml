@@ -1,11 +1,11 @@
 if (skin == WEAPONSKIN.BASIC)
 {
 	skin = WEAPONSKIN.ALT;
-	ChangeWeapon(skin);
+	ChangeWeaponSkin(skin);
 }
 else if (skin == WEAPONSKIN.ALT)
 {
 	skin = WEAPONSKIN.BASIC;
-	ChangeWeapon(skin);
+	ChangeWeaponSkin(skin);
 }
-else ChangeWeapon(WEAPONSKIN.BASIC);
+else ChangeWeaponSkin(WEAPONSKIN.BASIC);

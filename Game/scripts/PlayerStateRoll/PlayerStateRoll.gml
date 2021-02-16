@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerStateRoll(){
-	
+	invFramePlayer = true;
 	//Movement
 	hsp = lengthdir_x(rollsp, roll_direction);
 	vsp = lengthdir_y(rollsp, roll_direction);
@@ -32,6 +32,7 @@ function PlayerStateRoll(){
 	//Change state
 	if (moveDistanceRemaining <= 0)
 	{
+		invFramePlayer = false;
 		state = PlayerStateFree;
 	}
 }

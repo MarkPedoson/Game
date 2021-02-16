@@ -32,4 +32,4 @@ weaponSkin[1] = ds_map_create();
 ds_map_add(weaponSkin[1], "spriteWeapon", sClawAlt);
 ds_map_add(weaponSkin[1], "spriteBasic", sClawBasicAlt);
 
-ChangeWeapon(skin);
+ChangeWeaponSkin(skin);

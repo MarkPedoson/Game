@@ -4,28 +4,29 @@ key_basic = mouse_check_button_pressed(mb_left);
 //Weapon lock
 if (ownerChar != -1)
 {
-	//CD management
-	//Basic
-	if (canBasic == false) 
-	{
-		if (state != WEAPONSTATE.BASIC) 
-		{
-			if (basicCDTimer > 0) basicCDTimer--;
-			else if (basicCDTimer == 0) canBasic = true;
-		}
-	}
-	
 	//Location
 	x = ownerChar.x;
 	y = (ownerChar.y - ownerChar.z) + yChar;
 	
 	//Visibility
-	if (ownerChar.state == PlayerStateDead) visible = false;
-	else visible = true;
+	if (ownerChar.state != PlayerStateDead) visible = true;
+	else visible = false;
 	
 	//State management
 	if (!global.gamePaused)
 	{
+		//CD
+		//Basic
+		if (canBasic == false) 
+		{
+			if (state != WEAPONSTATE.BASIC) 
+			{
+				if (basicCDTimer > 0) basicCDTimer--;
+				else if (basicCDTimer == 0) canBasic = true;
+			}
+		}
+		
+		//State
 		if (ownerChar.state == PlayerStateLocked) and (state != WEAPONSTATE.LOCKED)
 		{
 			prevstate = state;
