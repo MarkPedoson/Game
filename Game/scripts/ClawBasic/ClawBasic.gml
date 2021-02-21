@@ -2,7 +2,25 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ClawBasic(){
 	//Change weapon sprite
-	sprite_index = spriteBasic;
+	var _HB;
+	switch (altAmmoTemp){
+		case 3:
+			sprite_index = spriteBasic;
+			_HB = oClawBasicHB;
+			break;
+		case 2:
+			sprite_index = spriteBasic1;
+			_HB = oClawBasicHB_1;
+			break;
+		case 1:
+			sprite_index = spriteBasic2;
+			_HB = oClawBasicHB_2;
+			break;
+		default:
+			sprite_index = spriteWeapon;
+			_HB = oClawBasicHB;
+			break;
+	}
 	//Make sure the player is not hurt or dead
 	if (instance_exists(ownerChar)) and (ownerChar.state != PLAYERSTATE.HURT) and (ownerChar.state != PLAYERSTATE.DEAD)
 	{
@@ -13,9 +31,9 @@ function ClawBasic(){
 		//Hitbox when
 		if (image_index >= basicDamageSprite) and (image_index < sprite_get_number(sprite_index)-1)
 		{
-			var _canCast = CastablePlayer(oClawBasicHB, ownerChar);
+			var _canCast = CastablePlayer(_HB, ownerChar);
 			if (_canCast){
-				with (instance_create_layer(x, y, "Instance", oClawBasicHB))
+				with (instance_create_layer(x, y, "Instance", _HB))
 				{
 					ownerChar = other.ownerChar;
 					image_yscale = other.image_yscale;

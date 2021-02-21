@@ -17,8 +17,12 @@ function ClawAlt(){
 	}
 	_c.altAmmoCounter -= 1;
 	if (_c.altAmmoCounter != 0) oClaw.alarm[0] = 0.3 * room_speed; //Slight delay
-	
-	
+	else if (_c.altAmmoCounter == 0) {
+		canBasic = false;
+		_c.basicCDTimer = _c.altCDTimer;
+		basicCD = altCD; //Setting basicCD the same so UI would have the same ratio
+		alarm[1] = _c.altCDTimer; //Alarm to setting back to original, very weird I know
+	}
 	
 	//State
 	state = WEAPONSTATE.FREE; 

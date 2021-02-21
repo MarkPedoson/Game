@@ -32,8 +32,5 @@ altIconAct = sCerbIcon;
 
 
 //Weapon skins
-weaponSkin[0] = ds_map_create();
-ds_map_add(weaponSkin[0], "spriteWeapon", sSpear);
-ds_map_add(weaponSkin[0], "spriteBasic", sSpearBasic);
-
-ChangeWeaponSkin(skin);
+spriteWeapon = sSpear;
+spriteBasic = sSpearBasic;

@@ -2,7 +2,24 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ClawFree(){
 	//Changing back to default sprite
-	sprite_index = spriteWeapon;
+	switch (oCooldown.altAmmoCounter){
+		case 3:
+			sprite_index = spriteWeapon;
+			break;
+		case 2:
+			sprite_index = spriteWeapon1;
+			break;
+		case 1:
+			sprite_index = spriteWeapon2;
+			break;
+		case 0:
+			sprite_index = spriteWeapon3;
+			break;
+		default:
+			sprite_index = spriteWeapon;
+			break;
+	}
+	
 	image_index = 0;
 	image_speed = 0;
 	
@@ -26,6 +43,9 @@ function ClawFree(){
 		
 		//Cd code
 		canBasic = false;
+		
+		//Helper
+		altAmmoTemp = oCooldown.altAmmoCounter;
 		
 		//State switch
 		state = WEAPONSTATE.BASIC;
