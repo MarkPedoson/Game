@@ -4,7 +4,7 @@ function SpearBasic(){
 	//Change weapon sprite
 	sprite_index = spriteBasic;
 	//Make sure the player is not hurt or dead
-	if (instance_exists(ownerChar)) and (ownerChar.state != PlayerStateHurt) and (ownerChar.state != PlayerStateDead)
+	if (instance_exists(ownerChar)) and (ownerChar.state != PLAYERSTATE.HURT) and (ownerChar.state != PLAYERSTATE.DEAD)
 	{
 		//Sprite anim speed
 		if (image_index < basicDamageSprite) image_speed = 0.3;
@@ -13,11 +13,11 @@ function SpearBasic(){
 		//Hitbox when
 		if (image_index >= basicDamageSprite) and (image_index < sprite_get_number(sprite_index)-1)
 		{
-			if (!instance_exists(oSpearBasicHB)){
+			var _canCast = CastablePlayer(oSpearBasicHB, ownerChar);
+			if (_canCast){
 				with (instance_create_layer(x, y, "Instance", oSpearBasicHB))
 				{
 					ownerChar = other.ownerChar;
-					ownerCharWeapon = other.id;
 					image_yscale = other.image_yscale;
 					direction = other.image_angle;
 					image_angle = direction;
@@ -36,7 +36,7 @@ function SpearBasic(){
 	{	
 		ds_list_destroy(ownerChar.damage_list);
 		//Hit the cd
-		basicCDTimer = room_speed * basicCD;
+		oCooldown.basicCDTimer = room_speed * basicCD;
 		//State
 		state = WEAPONSTATE.FREE; 
 	}

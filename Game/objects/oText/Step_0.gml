@@ -12,8 +12,8 @@ var _max = array_length_1d(arrayResponses) - 1;
 var _min = 0;
 if (responseSelected > _max) responseSelected = _min;  //Wraps around the choices
 if (responseSelected < _min) responseSelected = _max;
-
-if (oPlayer.key_roll)
+var _p = global.currentPlayer;
+if (_p.key_roll)
 {
 	var _messageLength = string_length(textMessage);
 	if (textProgress >= _messageLength)
@@ -29,7 +29,7 @@ if (oPlayer.key_roll)
 		}
 		else
 		{
-			with (oPlayer) state = lastState;
+			with (_p) state = lastState;
 		}
 	}
 	else
@@ -68,7 +68,7 @@ if ((mouse_y < (textY + _textMessageY + _lastResponse))
 			}
 			else
 			{
-				with (oPlayer) state = lastState;
+				with (_p) state = lastState;
 			}
 		}
 		else
@@ -94,7 +94,7 @@ else if (arrayResponses[0] == -1)
 			}
 			else
 			{
-				with (oPlayer) state = lastState;
+				with (_p) state = lastState;
 			}
 		}
 		else

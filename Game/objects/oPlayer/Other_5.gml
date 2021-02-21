@@ -1,4 +1,4 @@
-if (state == PlayerStateDead)
+if (state == PLAYERSTATE.DEAD)
 {
 	global.playerHealth = global.playerHealthMax;
 }

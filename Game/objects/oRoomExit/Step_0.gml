@@ -1,13 +1,16 @@
 //Causes room transition 
-if (instance_exists(oPlayer) and (position_meeting(oPlayer.x, oPlayer.y, id)))
+var _p = global.currentPlayer;
+if (_p != noone and (position_meeting(_p.x, _p.y, id)))
 {
-	if (!instance_exists(oTransition)) and (oPlayer.state != PlayerStateDead)
+	if (!instance_exists(oTransition)) and (_p.state != PLAYERSTATE.DEAD)
 	{
 		global.targetRoom = targetRoom;
 		global.targetX = targetX;
 		global.targetY = targetY;
-		global.targetDirection = oPlayer.direction;
-		if (oPlayer.currentWeapon != noone) global.prevWeapon = oPlayer.currentWeapon.weaponType;
+		global.targetDirection = _p.direction;
+		if (oPlayer.currentWeapon != noone) global.prevWeapon = _p.currentWeapon.weaponType;
+		if (oPlayer.currentCharacter != -1) global.prevCharacter = _p.currentCharacter;
+		global.currentPlayer = noone;
 		room_goto(targetRoom);	//Instant switch to room
 	
 		/*

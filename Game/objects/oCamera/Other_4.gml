@@ -1,6 +1,7 @@
 //Update camera when entering room
-if (instance_exists(oPlayer))
+var _p = global.currentPlayer;
+if (_p != noone)
 {
-	x = oPlayer.x;
-	y = oPlayer.y;
+	x = _p.x;
+	y = _p.y;
 }

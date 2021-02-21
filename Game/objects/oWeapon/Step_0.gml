@@ -1,6 +1,7 @@
 //Could use 'Begin step' to make the weapon floaty
 key_basic = mouse_check_button_pressed(mb_left);
-
+key_alt = mouse_check_button_pressed(mb_right);
+var _CD = oCooldown;
 //Weapon lock
 if (ownerChar != -1)
 {
@@ -9,7 +10,7 @@ if (ownerChar != -1)
 	y = (ownerChar.y - ownerChar.z) + yChar;
 	
 	//Visibility
-	if (ownerChar.state != PlayerStateDead) visible = true;
+	if (ownerChar.state != PLAYERSTATE.DEAD) visible = true;
 	else visible = false;
 	
 	//State management
@@ -17,30 +18,67 @@ if (ownerChar != -1)
 	{
 		//CD
 		//Basic
-		if (canBasic == false) 
+		if (canBasic == false) or (basicAmmo != -1 and _CD.basicAmmoCounter < basicAmmo)
 		{
 			if (state != WEAPONSTATE.BASIC) 
 			{
-				if (basicCDTimer > 0) basicCDTimer--;
-				else if (basicCDTimer == 0) canBasic = true;
+				//Normal cd
+				if (_CD.basicCDTimer > 0) _CD.basicCDTimer--;
+				else if (_CD.basicCDTimer == 0){
+					if (basicAmmo != -1){
+						if (_CD.basicAmmoCounter == 0){
+							_CD.basicAmmoCounter = basicAmmo;
+						}
+						else {
+							_CD.basicAmmoCounter += 1;
+							if (_CD.basicAmmoCounter < basicAmmo) _CD.basicCDTimer = basicCD * room_speed;
+						}
+						canBasic = true;
+					}
+					else canBasic = true;
+				}
+			}
+		}
+		
+		//Alt
+		if (canAlt == false) or (altAmmo != -1 and _CD.altAmmoCounter < altAmmo)
+		{
+			if (state != WEAPONSTATE.ALT) 
+			{
+				//Normal cd
+				if (_CD.altCDTimer > 0) _CD.altCDTimer--;
+				else if (_CD.altCDTimer == 0){
+					if (altAmmo != -1){
+						if (_CD.altAmmoCounter == 0){
+							_CD.altAmmoCounter = altAmmo;
+						}
+						else {
+							_CD.altAmmoCounter += 1;
+							if (_CD.altAmmoCounter < altAmmo) _CD.altCDTimer = altCD * room_speed;
+						}
+						canAlt = true;
+					}
+					else canAlt = true;
+				}
 			}
 		}
 		
 		//State
-		if (ownerChar.state == PlayerStateLocked) and (state != WEAPONSTATE.LOCKED)
+		if (ownerChar.state == PLAYERSTATE.LOCKED) and (state != WEAPONSTATE.LOCKED)
 		{
 			prevstate = state;
 			state = WEAPONSTATE.LOCKED;
 		}
-		else if (ownerChar.state != PlayerStateLocked) and (state == WEAPONSTATE.LOCKED)
+		else if (ownerChar.state != PLAYERSTATE.LOCKED) and (state == WEAPONSTATE.LOCKED)
 		{
 			state = prevstate;
 			prevstate = -1;
 		}
 
 		if (weaponCharScript[state] != -1) script_execute(weaponCharScript[state]);
+		flashWeapon = max(flashWeapon - 0.05, 0);
 	}
 }
 
 //Draw over player
-if (instance_exists(oPlayer)) depth = oPlayer.depth - 1;
+if (ownerChar != -1) depth = ownerChar.depth - 1;

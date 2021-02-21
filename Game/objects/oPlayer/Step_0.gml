@@ -12,7 +12,7 @@ input_magnitude = (key_right - key_left != 0) or (key_down - key_up != 0);
 
 if (!global.gamePaused) 
 {
-	script_execute(state); //If statement only exists to deal with paused stated
+	if (playerCharScript[state] != -1) script_execute(playerCharScript[state]); //If statement only exists to deal with paused stated
 	invFrameCount = max(invFrameCount - 1, 0);
 	playerFlash = max(playerFlash - 0.05, 0);
 }

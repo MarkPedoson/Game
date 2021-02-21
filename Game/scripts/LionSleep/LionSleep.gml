@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionSleep(){
+	var _p = global.currentPlayer;
 	if (!wake_up)
 	{
 		sprite_index = sprSleep;
@@ -12,7 +13,7 @@ function LionSleep(){
 		{
 		
 			idleCheck = 0;
-			if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad) and (oPlayer.state != PlayerStateDead)
+			if (_p != noone) and (point_distance(x, y, _p.x, _p.y) < enemyActivationRad) and (_p.state != PLAYERSTATE.DEAD)
 			{
 				wake_up = true;
 				image_index = 0;

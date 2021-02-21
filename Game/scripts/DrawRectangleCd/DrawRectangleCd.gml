@@ -1,9 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function DrawRectangleCd(_x1, _y1, _x2, _y2, _value){
+function DrawRectangleCd(_x1, _y1, _x2, _y2, _value, _ammo){
 	var v, x1, y1, x2, y2, xm, ym, vd, vx, vy, v1;
 	v = _value;
-	var tex = sprite_get_texture(sCerbIcon, 0); //
+	if (_ammo == true) var tex = sprite_get_texture(sAmmoIcon, 0); //
+	else var tex = sprite_get_texture(sIcon, 0);
 	x1 = _x1; y1 = _y1; //first p
 	x2 = _x2; y2 = _y2; //sec p
 	xm = (x1 + x2) / 2; ym = (y1 + y2) / 2; //middle

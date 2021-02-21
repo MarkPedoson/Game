@@ -1,10 +1,10 @@
 //Update camera
-
+var _p = global.currentPlayer;
 //Update destination
-if (instance_exists(follow))
+if (_p != noone)
 {
-	xTo = follow.x;
-	yTo = follow.y;
+	xTo = _p.x;
+	yTo = _p.y;
 }
 
 //Update object position

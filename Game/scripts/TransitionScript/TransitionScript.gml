@@ -1,22 +1,44 @@
+
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function TransitionScript(_weapon1, _weaponType1, _weapon2, _weaponType2){
+function TransitionScript(){
 	if (global.targetX != -1)
 	{
-		x = global.targetX;
-		y = global.targetY;
-		direction = global.targetDirection;
+		//x = global.targetX;
+		//y = global.targetY;
+		
+		if (global.prevCharacter != -1)
+		{
+			switch (global.prevCharacter)
+			{
+				case 0: 
+					SwitchCharacters(global.targetX, global.targetY, oCerberus, PLAYERCHAR.CERBERUS);
+					direction = global.targetDirection;
+					break;
+				case 1:
+					SwitchCharacters(global.targetX, global.targetY, oKitsune, PLAYERCHAR.KITSUNE);
+					direction = global.targetDirection;
+					break;
+			}
+		}
 	
 		//Lets add the weapon back
 		if (global.prevWeapon != -1)
 		{
-			if (global.prevWeapon == _weaponType1)
+			switch (global.prevWeapon)
 			{
-				SwitchWeapons(_weapon1);
-			}
-			else if (global.prevWeapon == _weaponType2)
-			{
-				SwitchWeapons(_weapon2);
+				case 0:
+					SwitchWeapons(oClaw);
+					break;
+				case 1:
+					SwitchWeapons(oSpear);
+					break;
+				case 2:
+					SwitchWeapons(oFan);
+					break;
+				case 3:
+					SwitchWeapons(oWhip);
+					break;
 			}
 		}
 		//Reset the var
@@ -25,5 +47,6 @@ function TransitionScript(_weapon1, _weaponType1, _weapon2, _weaponType2){
 		global.targetDirection = 0;
 		global.targetRoom = -1;
 		global.prevWeapon = -1;
+		global.prevCharacter = -1;
 	}
 }

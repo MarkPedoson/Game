@@ -1,0 +1,12 @@
+basicCDTimer = 0;
+basicAmmoCounter = -1;
+altCDTimer = 0;
+altAmmoCounter = -1;
+signCDTimer = 0;
+signAmmoCounter = -1;
+skill1CDTimer = 0;
+skill1AmmoCounter = -1;
+skill2CDTimer = 0;
+skill2AmmoCounter = -1;
+skill3CDTimer = 0;
+skill3AmmoCounter = -1

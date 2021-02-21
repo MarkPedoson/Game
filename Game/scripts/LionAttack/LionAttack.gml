@@ -1,15 +1,16 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionAttack(){
-	if (instance_exists(target)) and (target.state == PlayerStateDead) state = ENEMYSTATE.WANDER;
+	if (instance_exists(target)) and (target.state == PLAYERSTATE.DEAD) state = ENEMYSTATE.WANDER;
 	sprite_index = sprAttack;
 	image_speed = 0.75;
 	
 	var _attackX = x + image_xscale * attackX;
 	var _attackY = y + attackY;
 	
+	var _canCast = CastableAI(oLionBite, id);
 	//Attack itself
-	if (!instance_exists(oLionBite))
+	if (_canCast)
 	{
 		with (instance_create_layer(_attackX, _attackY, "Instance", oLionBite))
 		{

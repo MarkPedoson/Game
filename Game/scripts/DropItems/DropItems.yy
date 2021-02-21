@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Enemy scripts",
+    "path": "folders/Scripts/Enemy scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "DropItems",

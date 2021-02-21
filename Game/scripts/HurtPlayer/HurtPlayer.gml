@@ -6,10 +6,11 @@ function HurtPlayer(_player, _direction, _force, _damage){
 		global.playerHealth = max(0, global.playerHealth - _damage);
 		with (_player)
 		{
-			state = PlayerStateHurt;
+			state = PLAYERSTATE.HURT;
 			direction = _direction - 180;
 			moveDistanceRemaining = _force;
 			playerFlash = 0.7;
+			if (currentWeapon != noone) currentWeapon.flashWeapon = 0.7;
 			invFramePlayer = true;
 			invFrameCount = 30;
 		}

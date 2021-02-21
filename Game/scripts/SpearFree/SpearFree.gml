@@ -19,7 +19,7 @@ function SpearFree(){
 	
 	
 	//Attack logic
-	if (key_basic) and (ownerChar.state == PlayerStateFree) and (canBasic == true)
+	if (key_basic) and (ownerChar.state == PLAYERSTATE.FREE) and (canBasic == true)
 	{
 		if (!ds_exists(ownerChar.damage_list, ds_type_list)) ownerChar.damage_list = ds_list_create();
 		ds_list_clear(ownerChar.damage_list);

@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionWander(){
+	var _p = global.currentPlayer;
 	if (!fall_asleep)
 	{
 		sprite_index = sprMove;
@@ -54,10 +55,10 @@ function LionWander(){
 	if (++aggroCheck >= aggroCheckDuration)
 	{
 		aggroCheck = 0;
-		if (instance_exists(oPlayer)) and (point_distance(x, y, oPlayer.x, oPlayer.y) <= enemyAggroRad) and (oPlayer.state != PlayerStateDead)
+		if (_p != noone) and (point_distance(x, y, _p.x, _p.y) <= enemyAggroRad) and (_p.state != PLAYERSTATE.DEAD)
 		{
 			state = ENEMYSTATE.CHASE;
-			target = oPlayer;
+			target = _p;
 		}
 	}
 	
@@ -65,7 +66,7 @@ function LionWander(){
 	if (++idleCheck >= idleCheckDuration)
 	{
 		idleCheck = 0;
-		if (instance_exists(oPlayer)) and ((point_distance(x, y, oPlayer.x, oPlayer.y) >= enemyActivationRad) or (oPlayer.state == PlayerStateDead))
+		if (_p != noone) and ((point_distance(x, y, _p.x, _p.y) >= enemyActivationRad) or (_p.state == PLAYERSTATE.DEAD))
 		{
 			deactivateTime++;
 			if (deactivateTime >= enemyDeactivateTime)
@@ -77,7 +78,7 @@ function LionWander(){
 				image_index = 0;
 			}
 		}
-		else if (instance_exists(oPlayer)) and (oPlayer.state != PlayerStateDead) and (point_distance(x, y, oPlayer.x, oPlayer.y) < enemyActivationRad)
+		else if (_p != noone) and (_p.state != PLAYERSTATE.DEAD) and (point_distance(x, y, _p.x, _p.y) < enemyActivationRad)
 		{
 			deactivateTime = 0;
 		}

@@ -3,10 +3,19 @@ prevstate = -1;
 
 ownerChar = -1;
 yChar = -10;
+flashWeapon = 0;
+flashWeaponShader = shWhitePlayer;
 
 //Skills
-canBasic = true;
-basicCDTimer = 0;
+var _c = oCooldown;
+basicAmmo = -1;
+if (_c.basicAmmoCounter) or ((_c.basicAmmoCounter == -1) and (_c.basicCDTimer != 0)) canBasic = false;
+else canBasic = true;
+
+altAmmo = -1;
+if (_c.altAmmoCounter == 0) or ((_c.altAmmoCounter == -1) and (_c.altCDTimer != 0)) canAlt = false;
+else canAlt = true;
+
 
 //Scripts
 weaponCharScript[WEAPONSTATE.FREE] = -1;

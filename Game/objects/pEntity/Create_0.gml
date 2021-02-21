@@ -1,4 +1,5 @@
 //Entity setup
+hitBy = -1;
 invFrame = false;
 z = 0;
 flash = 0;

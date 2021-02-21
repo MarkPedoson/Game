@@ -1,6 +1,6 @@
 #macro FRAME_RATE 60
 #macro TILE_SIZE 32
-#macro ROOM_START rStartArena
+#macro ROOM_START rCerberusJail
 #macro RES_X 96	
 #macro RES_Y 160
 #macro RESOLUTION_W 640
@@ -34,7 +34,8 @@ enum WEAPON
 {
 	CLAW,
 	SPEAR,
-	SHIELD
+	FAN,
+	WHIP
 }
 
 enum WEAPONSKIN
@@ -51,4 +52,10 @@ enum PLAYERSTATE
 	DEAD,
 	LOCKED,
 	TRANSITION
+}
+
+enum PLAYERCHAR
+{
+	CERBERUS,
+	KITSUNE
 }

@@ -13,10 +13,14 @@ function PlayerStateDead(){
 	
 	if (image_index + image_speed > image_number)
 	{
+		var _p = global.currentPlayer;
 		image_speed = 0;
-		global.targetX = RES_X;
-		global.targetY = RES_Y;
-		if (oPlayer.currentWeapon != noone) global.prevWeapon = oPlayer.currentWeapon.weaponType;
-		room_goto(ROOM_START);
+		var _res = ds_list_find_value(global.respawnLocations, _p.currentCharacter);
+		global.targetX = _res[0];
+		global.targetY = _res[1];
+		if (_p.currentWeapon != noone) global.prevWeapon = _p.currentWeapon.weaponType;
+		if (_p.currentCharacter != -1) global.prevCharacter = _p.currentCharacter;
+		CDReset();
+		room_goto(_res[2]);
 	}
 }

@@ -1,4 +1,4 @@
-if (!instance_exists(ownerChar)) or (ownerChar.state == PlayerStateHurt) or (ownerChar.state == PlayerStateDead)
+if (!instance_exists(ownerChar)) or (ownerChar.state == PLAYERSTATE.HURT) or (ownerChar.state == PLAYERSTATE.DEAD)
 {
 	instance_destroy();
 }

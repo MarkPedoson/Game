@@ -30,12 +30,12 @@ function NewTextBox(_message, _background, _array)
 	}
 
 
-	with (oPlayer)
+	with (global.currentPlayer)
 	{
-		if (state != PlayerStateLocked)
+		if (state != PLAYERSTATE.LOCKED)
 		{
 			lastState = state;
-			state = PlayerStateLocked;
+			state = PLAYERSTATE.LOCKED;
 		}
 	}
 }

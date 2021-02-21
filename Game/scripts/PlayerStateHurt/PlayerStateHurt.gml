@@ -19,9 +19,9 @@ function PlayerStateHurt(){
 	{
 		if (global.playerHealth > 0)
 		{
-			state = PlayerStateFree;
+			state = PLAYERSTATE.FREE;
 			invFramePlayer = false;
 		}
-		else state = PlayerStateDead;
+		else state = PLAYERSTATE.DEAD;
 	}
 }

@@ -1,6 +1,6 @@
-with (oPlayer) 
+with (global.currentPlayer) 
 {
-	if (state != PlayerStateDead) state = PlayerStateTransition;
+	if (state != PLAYERSTATE.DEAD) state = PLAYERSTATE.TRANSITION;
 }
 
 if (leading == OUT)
@@ -17,7 +17,7 @@ else //leading == IN
 	percent = max(0, percent - TRANSITION_SPEED);
 	if (percent <= 0)	//If screen fully shown
 	{
-		with (oPlayer) state = PlayerStateFree;
+		with (global.currentPlayer) state = PLAYERSTATE.FREE;
 		instance_destroy();
 	}
 }

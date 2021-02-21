@@ -19,7 +19,7 @@ function ClawFree(){
 	
 	
 	//Attack logic
-	if (key_basic) and (ownerChar.state == PlayerStateFree) and (canBasic == true)
+	if (key_basic) and (ownerChar.state == PLAYERSTATE.FREE) and (canBasic == true)
 	{
 		if (!ds_exists(ownerChar.damage_list, ds_type_list)) ownerChar.damage_list = ds_list_create();
 		ds_list_clear(ownerChar.damage_list);
@@ -29,5 +29,15 @@ function ClawFree(){
 		
 		//State switch
 		state = WEAPONSTATE.BASIC;
+	}
+	
+	//Alternate logic
+	if (key_alt) and (ownerChar.state == PLAYERSTATE.FREE) and (canAlt == true)
+	{
+		//Cd code 
+		canAlt = false;
+		
+		//State switch
+		state = WEAPONSTATE.ALT;
 	}
 }

@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function EntityHitScript(_enemy, _damage, _source){
+function EntityHitScript(_enemy, _damage, _source, _dealer){
 	//1 = destructible
 	//2 = for enemy damage
 	with (_enemy)
@@ -22,6 +22,7 @@ function EntityHitScript(_enemy, _damage, _source){
 					}
 					else
 					{
+						hitBy = _dealer;
 						if (state != ENEMYSTATE.HURT) state = ENEMYSTATE.HURT;
 					}
 				}
