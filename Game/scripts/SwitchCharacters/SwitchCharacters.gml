@@ -5,6 +5,5 @@ function SwitchCharacters(_x, _y, _character, _characterENUM){
 	{
 		global.currentPlayer = id;
 		currentCharacter = _characterENUM;
-		global.playerHealth = global.playerHealthMax;
 	}
 }

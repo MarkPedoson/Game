@@ -1,5 +1,6 @@
 draw_sprite(sShadow, 0, floor(x), floor(y));
 
+
 if (invFramePlayer == true) and (playerFlash == 0) and ((invFrameCount mod 8 < 2) == 0) and (state != PLAYERSTATE.DEAD)
 {
 	//For flashing;

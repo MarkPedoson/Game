@@ -11,7 +11,8 @@ function LionWander(){
 		{
 			hsp = 0;
 			vsp = 0;
-		
+			sprite_index = sprIdle;
+			image_speed = 0.5;
 			//Set new target destination
 			if (++wait >= waitDuration)
 			{
@@ -35,13 +36,6 @@ function LionWander(){
 		
 			//Enemy tile collision
 			var _collided = EnemyTileCollision();
-		}
-		
-		//Idle animation when not moving
-		if (hsp == 0 and vsp == 0)
-		{
-			sprite_index = sprIdle;
-			image_speed = 0.5;
 		}
 	}
 	else

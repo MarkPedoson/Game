@@ -51,60 +51,6 @@ function CerberusStateFree(){
 	//Interaction logic
 	if (key_interact) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE))
 	{
-		var _activateX = x + lengthdir_x(10, direction);
-		var _activateY = y + lengthdir_y(10, direction);
-		var _activateSize = 4;
-		var _activateList = ds_list_create();
-		activate = noone;
-		var _entitiesFound = collision_rectangle_list(
-			_activateX - _activateSize,
-			_activateY - _activateSize,
-			_activateX + _activateSize,
-			_activateY + _activateSize,
-			pEntity,
-			false,
-			true,
-			_activateList,
-			true
-		); 
-		
-		while (_entitiesFound > 0)
-		{
-			var _check = _activateList [| --_entitiesFound];
-			if /*(_check != global.iLifted) and */ (_check.entityActivateScript != -1)
-			{
-				activate = _check;
-				break;
-			}
-		}
-		
-		ds_list_destroy(_activateList);
-		//activate = instance_position(x + _activateX, y + _activateY, pEntity);
-		if (activate == noone or activate.entityActivateScript == -1)
-		{
-			//do_nothing
-		}
-		else
-		{
-			//Activate the entity
-			ScriptExecuteArray(activate.entityActivateScript, activate.entityActivateArgs);
-			
-			//Make an npc face the player
-			if (activate.entityNPC)
-			{
-				with (activate)
-				{
-					direction = point_direction(x, y, other.x, other.y);
-					if (direction > 90) and (direction < 270)
-					{
-						image_xscale = -1;	//Left
-					}
-					else
-					{
-						image_xscale = 1;	//Right
-					} 
-				}
-			}
-		}	
+		ActivateEntity();	
 	}
 }

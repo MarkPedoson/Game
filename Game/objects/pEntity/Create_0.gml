@@ -1,4 +1,6 @@
 //Entity setup
+collX = 12;
+collY = 10;
 hitBy = -1;
 invFrame = false;
 z = 0;

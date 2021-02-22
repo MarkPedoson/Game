@@ -1,4 +1,7 @@
 event_inherited()
+//Collision stats
+collX = 12;
+collY = 10;
 
 //Kitsune stats
 rolldist = 50 //dashing distance

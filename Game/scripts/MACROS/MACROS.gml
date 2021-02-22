@@ -2,6 +2,10 @@
 #macro TILE_SIZE 32
 #macro ROOM_START rCerberusJail
 
+#macro ENV_LEFT x - collX
+#macro ENV_RIGHT x + collX
+#macro ENV_TOP y - collY
+
 #macro RESOLUTION_W 640
 #macro RESOLUTION_H 360
 

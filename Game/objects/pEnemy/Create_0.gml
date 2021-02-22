@@ -1,7 +1,11 @@
 event_inherited();
+//Collision stats
+
 
 //Intrinsic variables
 state = ENEMYSTATE.IDLE;
+hsp_frac = 0;
+vsp_frac = 0;
 vsp = 0;
 hsp = 0;
 xTo = xstart;

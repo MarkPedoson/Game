@@ -1,11 +1,14 @@
 event_inherited();
+//Collision stats
+collX = 12;
+collY = 10;
 
 //Cerberus stats
 rolldist = 100 //dashing distance
 walksp = 3; //movement speed
 rollsp = 4; //how fast the space skill is
 rollheight = 24; //roll  height
-hpMax = 3;
+hpMax = 4;
 
 global.playerHealthMax = hpMax;
 //Cerberus skill icons

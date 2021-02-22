@@ -12,7 +12,7 @@ function HurtPlayer(_player, _direction, _force, _damage){
 			playerFlash = 0.7;
 			if (currentWeapon != noone) currentWeapon.flashWeapon = 0.7;
 			invFramePlayer = true;
-			invFrameCount = 30;
+			invFrameCount = 16;
 		}
 	}
 }
