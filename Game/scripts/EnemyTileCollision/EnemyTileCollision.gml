@@ -3,6 +3,7 @@
 function EnemyTileCollision(){
 	var _collision = false;
 	var _entityList = ds_list_create();
+	var _playerList = ds_list_create();
 	var _bbox_side;
 
 
@@ -56,10 +57,38 @@ function EnemyTileCollision(){
 	}
 	_entityCount = 0;
 	
+	//Horizontal player
+	if (hsp > 0) _bbox_side = ENV_RIGHT; else _bbox_side = ENV_LEFT;
+	var _playerCount = instance_place_list(_bbox_side + hsp, y, oPlayer, _playerList, false);
+	_playerCount += instance_place_list(_bbox_side + hsp, ENV_TOP, oPlayer, _playerList, false);
+	var _snapX;
+	while (_playerCount > 0)
+	{
+		var _playerCheck = _playerList[| 0];	
+		if (_playerCheck.invFramePlayer == true)
+		{
+			if (point_in_rectangle(_bbox_side + hsp, y, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y)) or
+				(point_in_rectangle(_bbox_side + hsp, ENV_TOP, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y))
+			{
+				//Move as close as we can
+				if (sign(hsp) == -1) _snapX = (_playerCheck.x + _playerCheck.collX) + 1 - (ENV_LEFT - x);
+				else _snapX = (_playerCheck.x - _playerCheck.collX) - 1 - (ENV_RIGHT - x);
+				x = _snapX;
+				hsp = 0;
+				_collision = true;
+				_playerCount = 0;
+			}
+		}
+		ds_list_delete(_playerList, 0);
+		_playerCount--;
+	}
+	_playerCount = 0;
+	
 	x += hsp;
 	
 	//Clear list between axis
 	ds_list_clear(_entityList);
+	ds_list_clear(_playerList);
 	
 	//Vertical Tiles
 	//Deciding the side
@@ -100,9 +129,37 @@ function EnemyTileCollision(){
 	}
 	_entityCount = 0;
 	
+	//Vertical players
+	if (vsp >= 0) _bbox_side = y; else _bbox_side = ENV_TOP;
+	var _playerCount = instance_place_list(ENV_LEFT, _bbox_side + vsp, oPlayer, _playerList, false);
+	_playerCount += instance_place_list(ENV_RIGHT, _bbox_side + vsp, oPlayer, _playerList, false);
+	var _snapY;
+	while (_playerCount > 0)
+	{
+		var _playerCheck = _playerList[| 0];	
+		if (_playerCheck.invFramePlayer == true)
+		{
+			if (point_in_rectangle(ENV_LEFT, _bbox_side + vsp, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y)) or
+				(point_in_rectangle(ENV_RIGHT, _bbox_side + vsp, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y))
+			{
+				//Move as close as we can
+				if (sign(vsp) == -1) _snapY = _playerCheck.y + 1 - (ENV_TOP - y);
+				else _snapY = (_playerCheck.y - _playerCheck.collY) - 1 - (y - y);
+				y = _snapY;
+				vsp = 0;
+				_collision = true;
+				_playerCount = 0;
+			}
+		}
+		ds_list_delete(_playerList, 0);
+		_playerCount--;
+	}
+	_playerCount = 0;
+	
 	y += vsp;
 	
 	ds_list_destroy(_entityList);
+	ds_list_destroy(_playerList);
 	
 	return _collision;
 }

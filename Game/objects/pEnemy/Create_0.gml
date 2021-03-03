@@ -1,5 +1,4 @@
 event_inherited();
-//Collision stats
 
 
 //Intrinsic variables

@@ -6,7 +6,7 @@ function LionReturn(){
 	{
 		sprite_index = sprReturn;
 		image_speed = 0.5;
-		
+		entityCollision = false;
 		image_alpha -= ((image_speed * sprite_get_speed(sprite_index)) / game_get_speed(gamespeed_fps)) / image_number;
 	}
 	else
@@ -14,7 +14,7 @@ function LionReturn(){
 		if (oLion.visible == false) oLion.visible = true;
 		sprite_index = sprReturn2;
 		image_speed = 0.5;
-		
+		entityCollision = true;
 		image_alpha += ((image_speed * sprite_get_speed(sprite_index)) / game_get_speed(gamespeed_fps)) / image_number;
 	}
 	

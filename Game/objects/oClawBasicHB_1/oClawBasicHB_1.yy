@@ -4,7 +4,7 @@
     "path": "sprites/sClawBasicHB_1/sClawBasicHB_1.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

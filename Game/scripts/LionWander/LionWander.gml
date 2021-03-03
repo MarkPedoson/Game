@@ -51,8 +51,11 @@ function LionWander(){
 		aggroCheck = 0;
 		if (_p != noone) and (point_distance(x, y, _p.x, _p.y) <= enemyAggroRad) and (_p.state != PLAYERSTATE.DEAD)
 		{
-			state = ENEMYSTATE.CHASE;
-			target = _p;
+			var _obstacle = LOSScript(self, _p);
+			if (!_obstacle){
+				state = ENEMYSTATE.CHASE;
+				target = _p;
+			}
 		}
 	}
 	

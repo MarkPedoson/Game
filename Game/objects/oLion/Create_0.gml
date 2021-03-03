@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-collX = 15;
+collX = 13;
 collY = 12;
 
 state = ENEMYSTATE.IDLE;

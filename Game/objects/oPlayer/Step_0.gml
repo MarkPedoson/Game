@@ -9,7 +9,6 @@ key_interact = keyboard_check(ord("E"));
 input_direction = point_direction(0,0,key_right-key_left, key_down - key_up);
 input_magnitude = (key_right - key_left != 0) or (key_down - key_up != 0);
 
-
 if (!global.gamePaused) 
 {
 	if (playerCharScript[state] != -1) script_execute(playerCharScript[state]); //If statement only exists to deal with paused stated
