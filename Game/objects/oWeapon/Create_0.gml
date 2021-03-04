@@ -1,8 +1,11 @@
+event_inherited();
+
 state = WEAPONSTATE.FREE;
 prevstate = -1;
 
 ownerChar = -1;
 yChar = -10;
+z = 0;
 flashWeapon = 0;
 flashWeaponShader = shWhitePlayer;
 

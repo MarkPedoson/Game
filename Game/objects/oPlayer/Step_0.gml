@@ -16,5 +16,3 @@ if (!global.gamePaused)
 	playerFlash = max(playerFlash - 0.05, 0);
 }
 
-
-depth = -bbox_bottom;

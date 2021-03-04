@@ -5,7 +5,7 @@ global.currentPlayer = noone;
 global.respawnLocations = ds_list_create();
 var _rL = global.respawnLocations;
 ds_list_add(_rL, [96, 160, rCerberusJail]);
-ds_list_add(_rL, [94, 128, rKitsuneJail]);
+ds_list_add(_rL, [64, 128, rKitsuneJail]);
 
 global.gamePaused = false;
 global.iCamera = instance_create_layer(0,0,layer, oCamera);  //Create the camera

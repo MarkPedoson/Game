@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ClawAlt(){
-	with (instance_create_layer(x, y, "Instance", oClawAlt))
+	with (instance_create_layer(x, y, "Skill_effects", oClawAlt))
 	{
 		ownerChar = other.ownerChar;
 		speed = 10;

@@ -1,3 +1,5 @@
+event_inherited();
+
 //Entity setup
 collX = 12;
 collY = 10;

@@ -1,3 +1,5 @@
+event_inherited();
+
 //Beginning attr of player
 state = PLAYERSTATE.FREE;
 lastState = state;

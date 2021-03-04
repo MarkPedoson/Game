@@ -1,3 +1,5 @@
+event_inherited();
+
 bounce = 0;
 deteriorate = 0;
 z = 0;

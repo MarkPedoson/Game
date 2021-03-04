@@ -12,7 +12,7 @@ function LionAttack(){
 	//Attack itself
 	if (_canCast)
 	{
-		with (instance_create_layer(_attackX, _attackY, "Instance", oLionBite))
+		with (instance_create_layer(_attackX, _attackY, "Skill_effects", oLionBite))
 		{
 			owner = other.id;
 			image_yscale = other.image_xscale;

@@ -7,11 +7,16 @@ if (ownerChar != -1)
 {
 	//Location
 	x = ownerChar.x;
-	y = (ownerChar.y - ownerChar.z) + yChar;
+	y = ownerChar.y + yChar;
+	z = ownerChar.z;
 	
 	//Visibility
-	if (ownerChar.state != PLAYERSTATE.DEAD) visible = true;
-	else visible = false;
+	if (ownerChar.state != PLAYERSTATE.DEAD) and (ownerChar.state != PLAYERSTATE.ROLL){
+		visible = true;
+	}
+	else {
+		visible = false;
+	}
 	
 	//State management
 	if (!global.gamePaused)
@@ -79,6 +84,3 @@ if (ownerChar != -1)
 		flashWeapon = max(flashWeapon - 0.05, 0);
 	}
 }
-
-//Draw over player
-if (ownerChar != -1) depth = ownerChar.depth - 1;
