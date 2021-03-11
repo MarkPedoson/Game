@@ -17,7 +17,7 @@ function ClawBasic(){
 			_HB = oClawBasicHB_2;
 			break;
 		default:
-			sprite_index = spriteWeapon;
+			sprite_index = spriteBasic;
 			_HB = oClawBasicHB;
 			break;
 	}

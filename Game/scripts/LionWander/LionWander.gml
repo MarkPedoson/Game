@@ -53,6 +53,8 @@ function LionWander(){
 		{
 			var _obstacle = LOSScript(self, _p);
 			if (!_obstacle){
+				image_index = 0;
+				image_speed = 0;
 				state = ENEMYSTATE.CHASE;
 				target = _p;
 			}
@@ -73,6 +75,7 @@ function LionWander(){
 				hsp = 0;
 				vsp = 0;
 				image_index = 0;
+				image_speed = 0;
 			}
 		}
 		else if (_p != noone) and (_p.state != PLAYERSTATE.DEAD) and (point_distance(x, y, _p.x, _p.y) < enemyActivationRad)

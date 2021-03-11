@@ -11,13 +11,16 @@ flashWeaponShader = shWhitePlayer;
 
 //Skills
 var _c = oCooldown;
+basicCD = 0;
 basicAmmo = -1;
 if (_c.basicAmmoCounter) or ((_c.basicAmmoCounter == -1) and (_c.basicCDTimer != 0)) canBasic = false;
 else canBasic = true;
 
+altCD = 0;
 altAmmo = -1;
 if (_c.altAmmoCounter == 0) or ((_c.altAmmoCounter == -1) and (_c.altCDTimer != 0)) canAlt = false;
 else canAlt = true;
+
 
 
 //Scripts

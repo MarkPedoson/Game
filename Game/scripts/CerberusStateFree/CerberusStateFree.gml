@@ -25,16 +25,19 @@ function CerberusStateFree(){
 	//Switches player sprite animation
 	if (hsp == 0) and (vsp == 0)
 	{
+		if (sprite_index != spriteIdle) image_index = 0;
 		sprite_index = spriteIdle;	
+		image_speed = 0.25;
 	}
 	else
 	{	
+		if (sprite_index != spriteRun) image_index = 0;
 		sprite_index = spriteRun;
 		image_speed = 1;
 	}
 	
 	//Change state for dodge rolling
-	if (key_roll) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE)) and (state != PLAYERSTATE.LOCKED) 
+	if (key_roll and canEndurance) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE)) and (state != PLAYERSTATE.LOCKED) 
 	{	
 		if (input_magnitude)
 		{
@@ -44,13 +47,29 @@ function CerberusStateFree(){
 		{
 			roll_direction = PlayerMouseDirectionFour();
 		}
+		oCooldown.enduranceCounter -= enduranceRoll;
+		
 		state = PLAYERSTATE.ROLL;
 		moveDistanceRemaining = rolldist;
+	}
+	
+	//Change state to heal
+	if (key_heal_press and canEndurance) 
+		and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE)) 
+		and (state != PLAYERSTATE.LOCKED)
+		and (global.playerHealth != global.playerHealthMax){
+		healStep = room_speed;
+		state = PLAYERSTATE.HEAL;	
 	}
 	
 	//Interaction logic
 	if (key_interact) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE))
 	{
 		ActivateEntity();	
+	}
+	
+	//Signature skill
+	if (key_sign and canSign) and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE)) and (state != PLAYERSTATE.LOCKED) {
+		state = PLAYERSTATE.SIGNATURE;	
 	}
 }

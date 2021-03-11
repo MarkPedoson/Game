@@ -1,5 +1,5 @@
 //Spear weapon switch
-CDReset();
+CDReset(true);
 if (currentWeapon == noone)
 {
 	SwitchWeapons(oFan);

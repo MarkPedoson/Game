@@ -10,3 +10,7 @@ skill2CDTimer = 0;
 skill2AmmoCounter = -1;
 skill3CDTimer = 0;
 skill3AmmoCounter = -1
+enduranceCounter = -1;
+enduranceCDTimer = 0;
+healCounter = 0;
+healTimes = 0;

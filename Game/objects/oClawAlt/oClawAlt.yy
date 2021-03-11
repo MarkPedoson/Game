@@ -23,7 +23,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":77,"eventType":8,"collisionObjectId":null,"parent":{"name":"oClawAlt","path":"objects/oClawAlt/oClawAlt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oClawAlt","path":"objects/oClawAlt/oClawAlt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oClawAlt","path":"objects/oClawAlt/oClawAlt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oClawAlt","path":"objects/oClawAlt/oClawAlt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"pEntity","path":"objects/pEntity/pEntity.yy",},"parent":{"name":"oClawAlt","path":"objects/oClawAlt/oClawAlt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],

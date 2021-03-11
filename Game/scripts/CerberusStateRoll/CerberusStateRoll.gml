@@ -32,6 +32,9 @@ function CerberusStateRoll(){
 	//Change state
 	if (moveDistanceRemaining <= 0)
 	{
+		oCooldown.enduranceCDTimer = room_speed * 0.5;
+		if (oCooldown.enduranceCounter < 100) canEndurance = false;
+		
 		invFramePlayer = false;
 		state = PLAYERSTATE.FREE;
 	}

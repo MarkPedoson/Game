@@ -1,2 +1,2 @@
 ownerChar = -1;
-travel_distance = 150;
+travel_distance = 100;

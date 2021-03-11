@@ -34,6 +34,7 @@ if (signAmmo != -1) and (_c.signAmmoCounter == -1) _c.signAmmoCounter = signAmmo
 if (skill1Ammo != -1) and (_c.skill1AmmoCounter == -1) _c.skill1AmmoCounter = skill1Ammo;
 if (skill2Ammo != -1) and (_c.skill2AmmoCounter == -1) _c.skill2AmmoCounter = skill2Ammo;
 if (skill3Ammo != -1) and (_c.skill3AmmoCounter == -1) _c.skill3AmmoCounter = skill3Ammo;
+if (endurance != -1) and (_c.enduranceCounter == -1) _c.enduranceCounter = endurance;
 
 //Kitsune sprites
 spriteRoll = sIdle;

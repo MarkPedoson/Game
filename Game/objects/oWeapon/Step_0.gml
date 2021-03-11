@@ -11,7 +11,10 @@ if (ownerChar != -1)
 	z = ownerChar.z;
 	
 	//Visibility
-	if (ownerChar.state != PLAYERSTATE.DEAD) and (ownerChar.state != PLAYERSTATE.ROLL){
+	if (ownerChar.state != PLAYERSTATE.DEAD) 
+		and (ownerChar.state != PLAYERSTATE.ROLL) 
+		and (ownerChar.state != PLAYERSTATE.SIGNATURE)
+		and (ownerChar.state != PLAYERSTATE.HEAL){
 		visible = true;
 	}
 	else {
@@ -31,7 +34,7 @@ if (ownerChar != -1)
 				if (_CD.basicCDTimer > 0) _CD.basicCDTimer--;
 				else if (_CD.basicCDTimer == 0){
 					if (basicAmmo != -1){
-						if (_CD.basicAmmoCounter == 0){
+						if (_CD.basicAmmoCounter <= 0){
 							_CD.basicAmmoCounter = basicAmmo;
 						}
 						else {
@@ -53,8 +56,9 @@ if (ownerChar != -1)
 				//Normal cd
 				if (_CD.altCDTimer > 0) _CD.altCDTimer--;
 				else if (_CD.altCDTimer == 0){
+					//If ammo mechanic exists
 					if (altAmmo != -1){
-						if (_CD.altAmmoCounter == 0){
+						if (_CD.altAmmoCounter <= 0){
 							_CD.altAmmoCounter = altAmmo;
 						}
 						else {

@@ -1,5 +1,5 @@
 /// @description Char switch kitsune
-CDReset();
+CDReset(false);
 global.currentPlayer = noone;
 var _res = ds_list_find_value(global.respawnLocations, PLAYERCHAR.KITSUNE);
 global.targetX = _res[0];

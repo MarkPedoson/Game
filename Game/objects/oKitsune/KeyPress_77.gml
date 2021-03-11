@@ -1,5 +1,5 @@
 //Claw weapon switch
-CDReset();
+CDReset(true);
 if (currentWeapon == noone)
 {
 	SwitchWeapons(oWhip);

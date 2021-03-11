@@ -20,8 +20,7 @@ function ClawFree(){
 			break;
 	}
 	
-	image_index = 0;
-	image_speed = 0;
+	image_speed = 0.10;
 	
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 	
@@ -47,6 +46,9 @@ function ClawFree(){
 		//Helper
 		altAmmoTemp = oCooldown.altAmmoCounter;
 		
+		//Set image info
+		image_index = 0;
+		
 		//State switch
 		state = WEAPONSTATE.BASIC;
 	}
@@ -56,6 +58,12 @@ function ClawFree(){
 	{
 		//Cd code 
 		canAlt = false;
+		
+		//Helper
+		altAmmoTemp = oCooldown.altAmmoCounter;
+		
+		//Set image info
+		image_index = 0;
 		
 		//State switch
 		state = WEAPONSTATE.ALT;

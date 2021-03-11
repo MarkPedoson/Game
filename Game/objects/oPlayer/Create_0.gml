@@ -19,6 +19,7 @@ invFramePlayer = false;
 hsp = 0; //horizontal speed
 vsp = 0; //vertical speed
 invFrameCount = 0;
+healStep = 0;
 //Hurt properties
 hurtSpeed = 1.5;
 hurtDistance = 40;
@@ -41,26 +42,44 @@ basicIcon = sAllIcon;
 basicIconAct = sAllIcon;
 altIcon = sAllIcon;
 altIconAct = sAllIcon;
+
+signCD = 0;
 signAmmo = -1;
 if (_c.signAmmoCounter == 0) or ((_c.signAmmoCounter == -1) and (_c.signCDTimer != 0)) canSign = false;
 else canSign = true;
 signIcon = sAllIcon;
 signIconAct = sAllIcon;
+
+skill1CD = 0;
 skill1Ammo = -1;
 if (_c.skill1AmmoCounter == 0) or ((_c.skill1AmmoCounter == -1) and (_c.skill1CDTimer != 0)) canSkill1 = false;
 else canSkill1 = true;
 skill1Icon = sAllIcon;
 skill1IconAct = sAllIcon;
+
+skill2CD = 0;
 skill2Ammo = -1;
 if (_c.skill2AmmoCounter == 0) or ((_c.skill2AmmoCounter == -1) and (_c.skill2CDTimer != 0)) canSkill2 = false;
 else canSkill2 = true;
 skill2Icon = sAllIcon;
 skill2IconAct = sAllIcon;
+
+skill3CD = 0;
 skill3Ammo = -1;
 if (_c.skill3AmmoCounter == 0) or ((_c.skill3AmmoCounter == -1) and (_c.skill3CDTimer != 0)) canSkill3 = false;
 else canSkill3 = true;
 skill3Icon = sAllIcon;
 skill3IconAct = sAllIcon;
+
+endurance = -1;
+enduranceRegen = 0;
+enduranceHeal = 0;
+enduranceRoll = 0;
+enduranceHealUse = 0;
+enduranceHealMax = 0;
+if (_c.enduranceCounter < 100) or (_c.enduranceCounter != -1) canEndurance = false;
+else canEndurance = true;
+
 
 //Scripts
 playerCharScript[PLAYERSTATE.FREE] = -1;
@@ -69,6 +88,8 @@ playerCharScript[PLAYERSTATE.HURT] = PlayerStateHurt;
 playerCharScript[PLAYERSTATE.DEAD] = PlayerStateDead;
 playerCharScript[PLAYERSTATE.LOCKED] = PlayerStateLocked;
 playerCharScript[PLAYERSTATE.TRANSITION] = PlayerStateTransition;
+playerCharScript[PLAYERSTATE.SIGNATURE] = -1
+playerCharScript[PLAYERSTATE.HEAL] = -1
 
 
 

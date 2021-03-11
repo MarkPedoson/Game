@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Player/Characters.yy",
+    "name": "Cerberus",
+    "path": "folders/Objects/Player/Characters/Cerberus.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCerberus",
