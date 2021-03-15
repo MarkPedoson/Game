@@ -9,7 +9,7 @@ function CerberusStateSignature(){
 		{
 			ownerChar = global.currentPlayer;
 			speed = 3;
-			image_xscale = other.image_xscale;
+			image_yscale = other.image_xscale;
 			direction = _image_angle;
 			image_angle = direction;
 		}

@@ -57,8 +57,9 @@ function CerberusStateFree(){
 	if (key_heal_press and canEndurance) 
 		and ((currentWeapon == noone) or (currentWeapon.state == WEAPONSTATE.FREE)) 
 		and (state != PLAYERSTATE.LOCKED)
-		and (global.playerHealth != global.playerHealthMax){
-		healStep = room_speed;
+		and (global.playerHealth != global.playerHealthMax)
+	{
+		healStep = room_speed * 0.5;
 		state = PLAYERSTATE.HEAL;	
 	}
 	

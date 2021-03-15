@@ -77,7 +77,8 @@ enduranceHeal = 0;
 enduranceRoll = 0;
 enduranceHealUse = 0;
 enduranceHealMax = 0;
-if (_c.enduranceCounter < 100) or (_c.enduranceCounter != -1) canEndurance = false;
+if (_c.enduranceCounter < 100) or (_c.enduranceCounter == -1) canEndurance = false;
+
 else canEndurance = true;
 
 

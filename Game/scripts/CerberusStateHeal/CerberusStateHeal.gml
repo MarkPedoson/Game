@@ -5,7 +5,7 @@ function CerberusStateHeal(){
 	healStep--;
 	if (healStep == 0){
 		_c.healCounter += enduranceHealUse;
-		healStep = room_speed;
+		healStep = room_speed * 0.5;
 		_c.enduranceCounter -= enduranceHealUse;
 		if (_c.enduranceCounter < 100) canEndurance = false;
 		if (_c.healCounter == enduranceHeal){

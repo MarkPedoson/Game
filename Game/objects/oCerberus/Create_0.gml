@@ -26,7 +26,8 @@ skill3Icon = sCerbIcon;
 
 //CD and DMG
 signCD = 1;
-signDMG = 3;
+signDMG = 1;
+signExplDMG = 3;
 skill1CD = 0;
 skill2CD = 0;
 skill3CD = 0;

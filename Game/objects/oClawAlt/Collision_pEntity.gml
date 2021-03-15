@@ -1,6 +1,6 @@
 if (other.entityHitScript != -1) and (other.invFrame == false)
 {
-	EntityHitScript(other, ownerChar.currentWeapon.altDMG, id, ownerChar);
+	EntityHitScript(other, ownerChar.currentWeapon.altDMG, id, ownerChar, stun, 0);
 	with (instance_create_layer(x, y, "Skill_effects", oClawAltParticle))
 	{
 		x = x + lengthdir_x(14, other.direction);

@@ -6,10 +6,10 @@ function LOSScript(_object, _target){
 	
 	// Rectangle 
 	var xmid = _object.x;
-	var x1 = _object.x - _object.collX -1;
-	var x2 = _object.x + _object.collX +1;
+	var x1 = _object.x - _object.collX;
+	var x2 = _object.x + _object.collX;
 	var y2 = _object.y;
-	var y1 = _object.y - _object.collY -1;
+	var y1 = _object.y - _object.collY;
 	var ymid = _object.y - floor(_object.collY / 2);
 	
 	// Angle

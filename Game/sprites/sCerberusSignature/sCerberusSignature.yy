@@ -1,5 +1,5 @@
 {
-  "bboxMode": 0,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 4,
@@ -7,14 +7,14 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 31,
-  "bbox_top": 0,
-  "bbox_bottom": 31,
+  "bbox_left": 24,
+  "bbox_right": 40,
+  "bbox_top": 7,
+  "bbox_bottom": 23,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 32,
+  "width": 48,
   "height": 32,
   "textureGroupId": {
     "name": "Default",
@@ -24,30 +24,30 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"168d857a-d077-4c42-961b-c95a772747a6","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"168d857a-d077-4c42-961b-c95a772747a6","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"168d857a-d077-4c42-961b-c95a772747a6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bbb41ae3-d319-4fa9-84a9-17c5f82475f3","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bbb41ae3-d319-4fa9-84a9-17c5f82475f3","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"bbb41ae3-d319-4fa9-84a9-17c5f82475f3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4a6f3cc2-4de6-40ea-8676-250273746c57","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4a6f3cc2-4de6-40ea-8676-250273746c57","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"4a6f3cc2-4de6-40ea-8676-250273746c57","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"abddefb8-c585-44cd-ad8e-eb6fcfe41ab6","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"abddefb8-c585-44cd-ad8e-eb6fcfe41ab6","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"abddefb8-c585-44cd-ad8e-eb6fcfe41ab6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4481e11c-114f-41fe-8aef-512870ef0378","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4481e11c-114f-41fe-8aef-512870ef0378","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"4481e11c-114f-41fe-8aef-512870ef0378","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"79b4539e-0cb7-4897-aa2f-677501fe9b01","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"79b4539e-0cb7-4897-aa2f-677501fe9b01","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"79b4539e-0cb7-4897-aa2f-677501fe9b01","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a0bb033b-247e-4005-bcbf-77173e574036","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a0bb033b-247e-4005-bcbf-77173e574036","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"a0bb033b-247e-4005-bcbf-77173e574036","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6bd4a3e5-9d78-4b54-b8a2-efa17fd35b1a","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6bd4a3e5-9d78-4b54-b8a2-efa17fd35b1a","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"c2a1aed0-96db-4539-a858-4be730000a48","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"6bd4a3e5-9d78-4b54-b8a2-efa17fd35b1a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"49a77a18-420f-4b22-b399-4cce821c48e2","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"49a77a18-420f-4b22-b399-4cce821c48e2","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"49a77a18-420f-4b22-b399-4cce821c48e2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1e05ea3a-0c66-4ae9-849d-ceeb1635ee8a","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1e05ea3a-0c66-4ae9-849d-ceeb1635ee8a","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"1e05ea3a-0c66-4ae9-849d-ceeb1635ee8a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"48e20a6e-042a-4b22-9ec4-b3d0eeba40c4","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"48e20a6e-042a-4b22-9ec4-b3d0eeba40c4","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"48e20a6e-042a-4b22-9ec4-b3d0eeba40c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0eac1169-9c55-412d-a6a1-abe1a1380250","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0eac1169-9c55-412d-a6a1-abe1a1380250","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"0eac1169-9c55-412d-a6a1-abe1a1380250","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"67ec0c1e-b546-417d-8c5d-4679e2cf80d4","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"67ec0c1e-b546-417d-8c5d-4679e2cf80d4","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"67ec0c1e-b546-417d-8c5d-4679e2cf80d4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"fe5723d1-73eb-4200-a348-5272ec16e4d2","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"fe5723d1-73eb-4200-a348-5272ec16e4d2","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"fe5723d1-73eb-4200-a348-5272ec16e4d2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b6c5fcea-0a4f-4aea-a7e6-dd4a3f9ad1b0","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b6c5fcea-0a4f-4aea-a7e6-dd4a3f9ad1b0","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"b6c5fcea-0a4f-4aea-a7e6-dd4a3f9ad1b0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b4d1b281-ef8c-4385-a3e9-20a13fdf21ac","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b4d1b281-ef8c-4385-a3e9-20a13fdf21ac","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"LayerId":{"name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","name":"b4d1b281-ef8c-4385-a3e9-20a13fdf21ac","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sCerberusSignature","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},
@@ -62,14 +62,14 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c9b95653-b987-488b-a84f-65b2d0d42e04","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"168d857a-d077-4c42-961b-c95a772747a6","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"a23a4425-9b28-4c91-ae88-c06c9c57f5cc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bbb41ae3-d319-4fa9-84a9-17c5f82475f3","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"410572bd-35b6-4a32-a09e-68c49f3f05ed","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a6f3cc2-4de6-40ea-8676-250273746c57","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"43348f48-967c-4f06-857d-2c8fbb6b1512","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abddefb8-c585-44cd-ad8e-eb6fcfe41ab6","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6569e33a-0242-4760-bf8e-e4214e818b90","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4481e11c-114f-41fe-8aef-512870ef0378","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"51c6e288-8e2d-42fc-817f-a36ba0851ee5","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79b4539e-0cb7-4897-aa2f-677501fe9b01","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"55bf1f92-3940-4275-96ad-7714c6a73a17","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a0bb033b-247e-4005-bcbf-77173e574036","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"a92dc5c2-761d-48e5-9461-c5e89ab1fa6f","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6bd4a3e5-9d78-4b54-b8a2-efa17fd35b1a","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fdddb29e-ccd9-4057-90bb-7677e67c4709","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49a77a18-420f-4b22-b399-4cce821c48e2","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"56da4753-3b1b-4f67-8589-aeca5773c674","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1e05ea3a-0c66-4ae9-849d-ceeb1635ee8a","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5ab475d9-85f3-47e0-bc59-db8efe1ee639","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"48e20a6e-042a-4b22-9ec4-b3d0eeba40c4","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3fb34d27-12b7-4d40-9053-d9189571ec42","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0eac1169-9c55-412d-a6a1-abe1a1380250","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"46daec7c-1243-4878-baf6-8bc8650e613f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"67ec0c1e-b546-417d-8c5d-4679e2cf80d4","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e90256ac-e542-4385-ad97-52e5302d20dd","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fe5723d1-73eb-4200-a348-5272ec16e4d2","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9b4a7b85-be7a-4664-9964-7abc73361850","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b6c5fcea-0a4f-4aea-a7e6-dd4a3f9ad1b0","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b8fe0be1-db4f-44b9-b231-081249bb912f","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b4d1b281-ef8c-4385-a3e9-20a13fdf21ac","path":"sprites/sCerberusSignature/sCerberusSignature.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -82,7 +82,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 16,
+    "xorigin": 24,
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -93,7 +93,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c2a1aed0-96db-4539-a858-4be730000a48","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4da3c1b2-daa0-421b-8ce3-16d67d0f0feb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Cerberus_player",

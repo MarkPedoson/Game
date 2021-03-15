@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player scripts",
-    "path": "folders/Scripts/Player scripts.yy",
+    "name": "Player helpers",
+    "path": "folders/Scripts/Player scripts/Player helpers.yy",
   },
   "resourceVersion": "1.0",
   "name": "SwitchCharacters",
