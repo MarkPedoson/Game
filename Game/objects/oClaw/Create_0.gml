@@ -6,7 +6,7 @@ weaponType = WEAPON.CLAW;
 skin = WEAPONSKIN.BASIC;
 
 //Basic attr
-basicDamageSprite = 4;
+basicDamageSprite = 3;
 basicCD = 0.3; //Alarm[1] has the same value in it
 basicDMG = 2;
 
