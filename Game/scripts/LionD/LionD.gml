@@ -13,7 +13,7 @@ function LionD(){
 		if (hsp != 0) image_xscale = -sign(hsp);
 		
 		//Collision stops knockback
-		EnemyTileCollision()
+		if (flash != 0) EnemyTileCollision();
 		
 	}
 	else

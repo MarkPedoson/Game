@@ -45,4 +45,4 @@ enemyScript[ENEMYSTATE.HURT] = -1;
 enemyScript[ENEMYSTATE.DIE] = -1;
 enemyScript[ENEMYSTATE.RETURNING] = -1;
 enemyScript[ENEMYSTATE.WAIT] = EnemyWait;
-enemyScript[ENEMYSTATE.STUNNED] = EnemyStun;
+enemyScript[ENEMYSTATE.STUNNED] = -1;

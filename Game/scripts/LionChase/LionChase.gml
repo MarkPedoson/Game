@@ -2,7 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionChase(){
 	//Checking if player is alive
-	if (instance_exists(target)) and (target.state == PLAYERSTATE.DEAD) state = ENEMYSTATE.WANDER;
+	if (instance_exists(target)) 
+		and (target.state == PLAYERSTATE.DEAD)
+		state = ENEMYSTATE.WANDER;
 
 	//Player hid away
 	var _obstacle = LOSScript(self, target);

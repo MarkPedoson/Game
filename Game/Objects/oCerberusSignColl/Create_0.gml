@@ -1,0 +1,1 @@
+ownerChar = -1;

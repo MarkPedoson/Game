@@ -1,16 +1,19 @@
 //1 = normal bipedal
 //2 = normal quadpedal
 // todo
-if (entityShadow != -1)
+if (entityShadow)
 {
-	switch (entityShadow)
+	switch (entitySize)
 	{
-		case 1:
+		case 0:
 			draw_sprite(sShadow, 0, floor(x), floor(y));
 			break;
-		case 2:
+		case 1:
 			draw_sprite(sShadow2, 0, floor(x), floor(y));
-			break;			
+			break;		
+		default:
+			draw_sprite(sShadow2, 0, floor(x), floor(y));
+			break;
 	}
 }
 //Usual damage
@@ -32,7 +35,10 @@ else if (stunned != -1)
 	switch (stunned)
 	{
 		case "magma":
-			SetShaderMagma(sMagmaShader, stunImageIndex, sprite_index, image_index);
+			if (entitySize == 0 or entitySize == 1) var _magmaShader = sMagmaShader;
+			else if (entitySize == 2) var _magmaShader = sMagmaShader2;
+			else if (entitySize == 3) var _magmaShader = sMagmaShader3;
+			SetShaderMagma(_magmaShader, stunImageIndex, sprite_index, image_index);
 			break;
 	}
 }

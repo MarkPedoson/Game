@@ -1,6 +1,6 @@
 event_inherited();
 //Collision stats
-collX = 12;
+collX = 10;
 collY = 10;
 
 //Cerberus stats

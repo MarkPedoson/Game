@@ -1,7 +1,7 @@
 /// @description Destroy when hitting a wall
 if (tilemap_get_at_pixel(ownerChar.obstructionMap, x, y))
 {
-	with (instance_create_layer(x, y, "Skill_effects", oClawAltParticle))
+	with (instance_create_layer(x, y, "Weapon_effects", oClawAltParticle))
 	{
 		x = x + lengthdir_x(15, other.direction);
 		y = y + lengthdir_y(7, other.direction);

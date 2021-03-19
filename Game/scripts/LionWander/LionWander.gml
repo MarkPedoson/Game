@@ -78,7 +78,9 @@ function LionWander(){
 				image_speed = 0;
 			}
 		}
-		else if (_p != noone) and (_p.state != PLAYERSTATE.DEAD) and (point_distance(x, y, _p.x, _p.y) < enemyActivationRad)
+		else if (_p != noone) 
+			and (_p.state != PLAYERSTATE.DEAD) 
+			and (point_distance(x, y, _p.x, _p.y) < enemyActivationRad)
 		{
 			deactivateTime = 0;
 		}

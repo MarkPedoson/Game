@@ -16,6 +16,7 @@ playerFlashShader = shWhitePlayer;
 hsp_frac = 0;
 vsp_frac = 0;
 invFramePlayer = false;
+deathScreen = false;
 hsp = 0; //horizontal speed
 vsp = 0; //vertical speed
 invFrameCount = 0;

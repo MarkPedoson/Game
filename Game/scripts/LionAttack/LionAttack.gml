@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function LionAttack(){
-	if (instance_exists(target)) and (target.state == PLAYERSTATE.DEAD) state = ENEMYSTATE.WANDER;
+	if (instance_exists(target)) 
+		and (target.state == PLAYERSTATE.DEAD)
+		state = ENEMYSTATE.WANDER;
 	sprite_index = sprAttack;
 	image_speed = 0.75;
 	

@@ -32,3 +32,4 @@ enemyScript[ENEMYSTATE.IDLE] = LionSleep;
 enemyScript[ENEMYSTATE.RETURNING] = LionReturn;
 enemyScript[ENEMYSTATE.HURT] = LionHurt;
 enemyScript[ENEMYSTATE.DIE] = LionD;
+enemyScript[ENEMYSTATE.STUNNED] = LionStun;

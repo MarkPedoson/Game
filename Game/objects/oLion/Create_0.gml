@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-collX = 15;
+collX = 13;
 collY = 12;
 
 state = ENEMYSTATE.IDLE;
@@ -32,3 +32,4 @@ enemyScript[ENEMYSTATE.IDLE] = LionSleep;
 enemyScript[ENEMYSTATE.RETURNING] = LionReturn;
 enemyScript[ENEMYSTATE.HURT] = LionHurt;
 enemyScript[ENEMYSTATE.DIE] = LionD;
+enemyScript[ENEMYSTATE.STUNNED] = LionStun;

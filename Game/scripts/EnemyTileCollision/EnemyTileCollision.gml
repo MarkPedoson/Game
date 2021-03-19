@@ -65,8 +65,7 @@ function EnemyTileCollision(){
 	while (_playerCount > 0)
 	{
 		var _playerCheck = _playerList[| 0];	
-		if (_playerCheck.invFramePlayer == true)
-		{
+		if (_playerCheck.state != PLAYERSTATE.DEAD){	
 			if (point_in_rectangle(_bbox_side + hsp, y, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y)) or
 				(point_in_rectangle(_bbox_side + hsp, ENV_TOP, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y))
 			{
@@ -137,8 +136,7 @@ function EnemyTileCollision(){
 	while (_playerCount > 0)
 	{
 		var _playerCheck = _playerList[| 0];	
-		if (_playerCheck.invFramePlayer == true)
-		{
+		if (_playerCheck.state != PLAYERSTATE.DEAD){
 			if (point_in_rectangle(ENV_LEFT, _bbox_side + vsp, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y)) or
 				(point_in_rectangle(ENV_RIGHT, _bbox_side + vsp, _playerCheck.x - _playerCheck.collX, _playerCheck.y - _playerCheck.collY, _playerCheck.x + _playerCheck.collX, _playerCheck.y))
 			{

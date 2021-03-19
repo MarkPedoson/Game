@@ -11,4 +11,5 @@ stunned = -1;
 stun = 0;
 stunCounter = 0;
 stunImageIndex = -1;
+stunPop = -1;
 uFlash = shader_get_uniform(shWhite, "flash");

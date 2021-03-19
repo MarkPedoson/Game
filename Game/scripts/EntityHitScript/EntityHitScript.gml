@@ -15,10 +15,13 @@ function EntityHitScript(_enemy, _damage, _source, _dealer, _stun, _stunDura){
 					//Checking if we apply usual flash or stun anim
 					if (_stun == -1){
 						flash = 1;
-						stunned = -1;
-						stun = 0;
-						stunCounter = 0;
-						stunImageIndex = -1;
+						if (stunned != -1){
+							StunParticle();
+							stunned = -1;
+							stun = 0;
+							stunCounter = 0;
+							stunImageIndex = -1;
+						}
 					}
 					//Stun anim
 					else{

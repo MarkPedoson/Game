@@ -24,7 +24,7 @@ function ClawAlt(){
 		{
 			var _canCast = CastablePlayer(oClawAlt, ownerChar);
 			if (_canCast){
-				with (instance_create_layer(x, y, "Skill_effects", oClawAlt))
+				with (instance_create_layer(x, y, "Weapon_effects", oClawAlt))
 				{
 					ownerChar = other.ownerChar;
 					speed = 10;
