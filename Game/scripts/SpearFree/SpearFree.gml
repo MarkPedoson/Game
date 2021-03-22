@@ -3,8 +3,7 @@
 function SpearFree(){
 	//Changing back to default sprite
 	sprite_index = spriteWeapon;
-	image_index = 0;
-	image_speed = 0;
+	image_speed = 0.25;
 	
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
 	
@@ -26,6 +25,9 @@ function SpearFree(){
 		
 		//Cd code
 		canBasic = false;
+		
+		//Set image info 
+		image_index = 0;
 		
 		//State switch
 		state = WEAPONSTATE.BASIC;
